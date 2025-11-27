@@ -1,75 +1,95 @@
-/* style.css */
-/* === Import Font === */
+/* === Import Font (Texturina) === */
 @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@300;400;500;700&display=swap');
 
-/* === Variables === */
+/* === Variables Using Your Color Palette === */
 :root {
-  --forest1: #5e6828;
-  --forest2: #333d1c;
-  --forest3: #131612;
-  --forest4: #535028;
+  --forest1: #5e6828;   /* Primary green for header/buttons */
+  --forest2: #333d1c;   /* Dark green for borders */
+  --forest3: #131612;   /* Very dark background */
+  --forest4: #535028;   /* Accent green */
 
-  --panel-bg: rgba(19, 22, 18, 0.35);
-  --text-light: #f5f5e8;
-  --text-muted: #c7c7b2;
+  --panel-bg: #002300;   /* Green panels */
+  --text-light: #e1e8d1; /* Light green/off-white for body text */
+  --text-dark: #2a3a0f;  /* Dark green for headings and links */
+  --text-muted: #c7c7b2; /* Muted text */
 }
 
-/* === Page Background === */
+/* === Page Background Image === */
 body {
-  background: url("https://wallpapers.com/images/hd/dark-green-forest-1920-x-1200-5xzwr29uzh1qw10h.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Texturina', serif;
-  color: var(--text-light);
+  background: url("https://wallpapers.com/images/hd/dark-green-forest-1920-x-1200-5xzwr29uzh1qw10h.jpg") no-repeat center center fixed !important;
+  background-size: cover !important;
+  font-family: 'Texturina', serif !important;
+  color: var(--text-light) !important;
 }
 
 /* === Panels / Boxes === */
 .box, .panel, .card, .sidebar, .denBox,
 .profile-box, .feature, .container.bg, .main {
-  background: var(--panel-bg);
-  backdrop-filter: blur(2px);
-  border: 1px solid var(--forest4);
-  border-radius: 10px;
-  color: var(--text-light);
+  background: var(--panel-bg) !important; /* Green panels */
+  border: 1px solid var(--forest2) !important;
+  border-radius: 10px !important;
+  color: var(--text-light) !important;
+  padding: 15px;
+  margin: 15px 0;
 }
 
-/* === Text === */
+/* === Headings === */
 h1, h2, h3, h4, header a, .title {
-  color: var(--forest1);
-  font-weight: 600;
+  color: var(--text-dark) !important; /* Dark green headings for contrast */
+  font-weight: 600 !important;
 }
 
+/* === Muted Text === */
 .muted, small, .meta {
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
 }
 
 /* === Links === */
-a { color: var(--forest1); }
-a:hover { color: var(--forest4); }
+a { color: var(--text-dark) !important; }  /* Dark green links */
+a:hover { color: var(--forest4) !important; }
 
-/* === Navigation Bar === */
+/* === Navigation Bar / Banner === */
 header, #header, .navbar {
-  background: rgba(51, 61, 28, 0.55);
-  border-bottom: 1px solid var(--forest4);
+  background: var(--forest1) !important;  /* Fully green header */
+  border-bottom: 1px solid var(--forest2) !important;
+  padding: 10px 20px;
 }
 
 /* === Buttons === */
 .button, .btn, button, input[type="submit"] {
-  background: var(--forest1);
-  color: #0f130c;
-  border-radius: 6px;
-  border: none;
+  background: var(--forest1) !important;
+  color: #0f130c !important;
+  border-radius: 6px !important;
+  border: none !important;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
 }
-.button:hover, .btn:hover { background: var(--forest4); }
+.button:hover, .btn:hover { background: var(--forest4) !important; }
 
-/* === Wolf Image Frames (example) === */
-img[src*="wolves"], img[src*="wolf"] {
-  border: 3px solid var(--forest2);
-  background: rgba(51, 61, 28, 0.45);
-  padding: 4px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+/* === Wolf Image Frames === */
+img[src*="wolves"],
+img[src*="wolf"],
+img[src*="/wolves/"],
+img[src*="dynasty"],
+img[src*="overview"],
+img[src*="breeding"],
+img[src*="pupsitting"],
+img[src*="socializing"],
+img[src*="nesting"],
+img[src*="pregnancy"],
+.packwolves img,
+.pack-overview img,
+.den img,
+.wolf img {
+    border: 3px solid var(--forest2) !important;
+    background: var(--forest1) !important;  /* Green background for images */
+    padding: 4px;
+    border-top-left-radius: 100px !important;
+    border-top-right-radius: 100px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
 
 /* === Scrollbar === */
@@ -77,6 +97,7 @@ img[src*="wolves"], img[src*="wolf"] {
 *::-webkit-scrollbar-thumb {
   background: var(--forest1);
   border-radius: 6px;
+}
 }
 <!DOCTYPE html>
 <html lang="en">

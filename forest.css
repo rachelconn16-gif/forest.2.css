@@ -1,179 +1,126 @@
-/* === Forest Color Variables === */
-:root {
---forest1: rgba(156, 180, 112, 0.8);  /* Light mossy green */
---forest2: #4f773d;                    /* Dark forest green for borders */
-}
-
-/* --------------- Image Filters --------------- */
-img {
--webkit-filter: grayscale(30%);
-filter: grayscale(30%);
-}
-
-img:hover {
--webkit-filter: grayscale(0%);
-filter: grayscale(0%);
-transition-duration: 0.5s;
-}
-
-/* === Wolf Image Frames === */
-img[src*="wolves"],
-img[src*="wolf"],
-img[src*="/wolves/"],
-img[src*="dynasty"],
-img[src*="overview"],
-img[src*="breeding"],
-img[src*="pupsitting"],
-img[src*="socializing"],
-img[src*="nesting"],
-img[src*="pregnancy"],
-.packwolves img,
-.pack-overview img,
-.den img,
-.wolf img {
-border: 3px solid var(--forest2) !important;
-background: var(--forest1) !important;
-padding: 4px;
-border-top-left-radius: 100px !important;
-border-top-right-radius: 100px !important;
-border-bottom-left-radius: 10px !important;
-border-bottom-right-radius: 10px !important;
-}
-/* === Wolf Image Hover Glow === */
-img[src*="wolves"]:hover,
-img[src*="wolf"]:hover,
-img[src*="/wolves/"]:hover,
-img[src*="dynasty"]:hover,
-img[src*="overview"]:hover,
-img[src*="breeding"]:hover,
-img[src*="pupsitting"]:hover,
-img[src*="socializing"]:hover,
-img[src*="nesting"]:hover,
-img[src*="pregnancy"]:hover,
-.packwolves img:hover,
-.pack-overview img:hover,
-.den img:hover,
-.wolf img:hover {
-box-shadow: 0 0 15px 5px rgba(79, 119, 61, 0.7); /* forest green glow */
-transition: box-shadow 0.3s ease-in-out;
-}
-/* === Scrollbar === */
-*::-webkit-scrollbar { width: 10px; }
-*::-webkit-scrollbar-thumb {
-background: var(--forest1);
-border-radius: 6px;
-}
-
-/* --------------- BODY --------------- */
-body {
-background-image: url("https://wallpapers.com/images/hd/dark-green-forest-1920-x-1200-5xzwr29uzh1qw10h.jpg");
-background-position: center;
-background-size: cover !important;
-font-family: 'Cinzel Decorative', serif;
-color: #e5e9c1;
-}
-
-/* --------------- NAVIGATION --------------- */
-#header .navbar-main {
-background-color: rgba(26, 45, 23, 0.85);
-border-radius: 5px 5px 0 0;
-}
-
-.navbar-status {
-background-color: rgba(26, 45, 23, 0.85) !important;
-color: #cddc9b !important;
-font-family: 'Cinzel Decorative', serif;
-border-radius: 0 0 5px 5px;
-}
-
-#header > nav.navbar-status > div {
-font-family: 'MedievalSharp', cursive;
-color: #cddc9b !important;
-}
-
-.navbar-status a { color: #cddc9b !important; }
-
-/* --------------- BREADCRUMB --------------- */
-.breadcrumb-nav {
-background-color: rgba(26, 45, 23, 0.5) !important;
-border-radius: 5px 5px 0 0;
-}
-
-.breadcrumb-item.active {
-color: #d6e2a1 !important;
-font-family: 'Cinzel Decorative', serif;
-}
-
-/* --------------- MAIN --------------- */
-#main { background-color: rgba(40, 58, 28, 0.5) !important; }
-h1 {
-color: #d6e2a1;
-font-size: 50px;
-font-weight: normal;
-font-family: 'Cinzel Decorative', serif;
-text-align: center;
-}
-
-/* ----- NAV TABS ----- */
-.nav-tabs { border: none; justify-content: center; }
-.nav-tabs .nav-link {
-color: #d6e2a1;
-font-family: 'Cinzel Decorative', serif;
-}
-.nav-tabs .nav-link.active {
-background-color: rgba(156, 180, 112, 0.5);
-border-color: rgba(156, 180, 112, 0.7);
-}
-.nav-tabs .nav-link:hover {
-border-color: rgba(156, 180, 112, 0.6);
-background: rgba(156, 180, 112, 0.8);
-}
-
-/* ----- BOXES ----- */
-.boxcontainer { display: flex; justify-content: center; background: none; padding: 0; }
-.Box1, .Box2, .Box3, .Box4, .Box5, .Box6 {
-background-color: var(--forest1);
-color: #e5e9c1;
-border-bottom: 3px solid #7b8a4f;
-border-radius: 3px;
-margin: 5px;
-overflow: hidden;
-transition: .5s;
-padding: 10px;
-text-align: center;
-}
-.Box1 { width: 92%; height: 55px; }
-.Box1:hover { height: 180px; overflow-y: auto; }
-.Box2 { width: 42%; height: 55px; }
-.Box2:hover { height: 180px; overflow-y: auto; }
-.Box3 { width: 24%; height: 55px; }
-.Box3:hover { height: 180px; overflow-y: auto; }
-.Box4 { width: 24%; height: 180px; overflow: auto; }
-.Box5 { width: 42%; height: 180px; overflow: auto; }
-.Box6 { width: 92%; height: 180px; overflow: auto; }
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forest Theme Page</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Golden Sidebar — hide/show</title>
+<style>
+  :root{
+    --sidebar-width: 260px;
+    --transition: 300ms ease;
+  }
+
+  body{
+    margin:0;
+    font-family: system-ui, Arial, sans-serif;
+    display:flex;
+    min-height:100vh;
+  }
+
+  /* Sidebar (golden) */
+  .sidebar{
+    width:var(--sidebar-width);
+    min-width:var(--sidebar-width);
+    background: linear-gradient(180deg,#ffd54a,#ffca28); /* golden */
+    box-shadow: 2px 0 12px rgba(0,0,0,.12);
+    padding:1rem;
+    box-sizing:border-box;
+    transform: translateX(0);
+    transition: transform var(--transition);
+    will-change: transform;
+  }
+
+  /* Main content */
+  .content{
+    flex:1;
+    padding:1.25rem;
+    background: #f6f7f9;
+  }
+
+  /* Hidden state: slide sidebar out to the left */
+  .sidebar.hidden{
+    transform: translateX(-110%);
+  }
+
+  /* Small-screen alternative: hide by setting display none */
+  @media (max-width:700px){
+    .sidebar{ position:fixed; left:0; top:0; bottom:0; z-index: 1000; }
+    .sidebar.hidden{ transform: translateX(-110%); }
+    .content{ padding-top: 4rem; } /* avoid overlap with header button */
+  }
+
+  /* Control button */
+  .btn{
+    display:inline-flex;
+    gap:.5rem;
+    align-items:center;
+    padding:.45rem .7rem;
+    background:#222;
+    color:white;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+    font-size:0.95rem;
+  }
+
+  /* Optional small toggle in the content area when sidebar hidden */
+  .show-btn{
+    position:fixed;
+    left:8px;
+    top:8px;
+    z-index: 1100;
+    display:none;
+  }
+  .show-btn.visible{ display:inline-flex; }
+
+  /* Optional: when sidebar is hidden, make content take full width */
+  .sidebar.hidden + .content{
+    /* nothing required - content flex:1 already occupies remaining space */
+  }
+</style>
 </head>
 <body>
-    <div class="main container">
-        <h1>Welcome to the Forest!</h1>
-        <p>This page is styled with a dark green forest theme, glassy panels, and elegant buttons.</p>
 
-        <div class="box">
-            <h2>Panel Example</h2>
-            <p>This is a panel with semi-transparent background and blurred backdrop.</p>
-            <button class="btn">Click Me</button>
-        </div>
+  <aside id="goldenSidebar" class="sidebar" role="complementary" aria-label="Sidebar">
+    <h2>Golden Sidebar</h2>
+    <p>Navigation, widgets, whatever you want in here.</p>
+    <button id="hideBtn" class="btn" aria-controls="goldenSidebar">Hide sidebar</button>
+  </aside>
 
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Forest Image">
+  <main class="content" id="mainContent" tabindex="-1">
+    <button id="showBtn" class="btn show-btn" aria-controls="goldenSidebar" title="Show sidebar">Show sidebar</button>
+    <h1>Page content</h1>
+    <p>Here's the main content of your page.</p>
+    <p>Click the "Hide sidebar" button inside the golden bar to make it disappear (slides left). Use the floating "Show sidebar" to bring it back.</p>
+  </main>
 
-        <p class="muted">This is muted text for secondary info.</p>
-    </div>
+<script>
+  // Toggle hide/show with JS
+  const sidebar = document.getElementById('goldenSidebar');
+  const hideBtn = document.getElementById('hideBtn');
+  const showBtn = document.getElementById('showBtn');
+
+  function hideSidebar(){
+    sidebar.classList.add('hidden');
+    sidebar.setAttribute('aria-hidden', 'true');
+    showBtn.classList.add('visible');
+    // move focus to main content for accessibility
+    document.getElementById('mainContent').focus();
+  }
+
+  function showSidebar(){
+    sidebar.classList.remove('hidden');
+    sidebar.removeAttribute('aria-hidden');
+    showBtn.classList.remove('visible');
+    // focus back to the first interactive element in sidebar
+    hideBtn.focus();
+  }
+
+  hideBtn.addEventListener('click', hideSidebar);
+  showBtn.addEventListener('click', showSidebar);
+
+  // Optional: hide on load if you want initial hidden state
+  // sidebar.classList.add('hidden'); sidebar.setAttribute('aria-hidden','true'); showBtn.classList.add('visible');
+</script>
 </body>
 </html>
-

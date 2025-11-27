@@ -104,16 +104,6 @@ color: #d6e2a1 !important;
 font-family: 'Cinzel Decorative', serif;
 }
 
-.breadcrumb::after {
-content: 'CSS by 121945';
-font-family: 'Cinzel Decorative', serif;
-position: absolute;
-zoom: 0.8;
-right: 48px;
-}
-
-a { color: #d6e2a1; }
-
 /* --------------- MAIN --------------- */
 #main { background-color: rgba(40, 58, 28, 0.5) !important; }
 h1 {

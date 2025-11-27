@@ -1,72 +1,20 @@
-/* === Import Font (Texturina) === */
-@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@300;400;500;700&display=swap');
-
-/* === Variables Using Your Color Palette === */
+/* === Forest Color Variables === */
 :root {
-  --forest1: #5e6828;   /* Primary green for header/buttons */
-  --forest2: #333d1c;   /* Dark green for borders */
-  --forest3: #131612;   /* Very dark background */
-  --forest4: #535028;   /* Accent green */
-
-  --panel-bg: #002300;   /* Green panels */
-  --text-light: #e1e8d1; /* Light green/off-white for body text */
-  --text-dark: #2a3a0f;  /* Dark green for headings and links */
-  --text-muted: #c7c7b2; /* Muted text */
+--forest1: rgba(156, 180, 112, 0.8);  /* Light mossy green */
+--forest2: #4f773d;                    /* Dark forest green for borders */
 }
 
-/* === Page Background Image === */
-body {
-  background: url("https://wallpapers.com/images/hd/dark-green-forest-1920-x-1200-5xzwr29uzh1qw10h.jpg") no-repeat center center fixed !important;
-  background-size: cover !important;
-  font-family: 'Texturina', serif !important;
-  color: var(--text-light) !important;
+/* --------------- Image Filters --------------- */
+img {
+-webkit-filter: grayscale(30%);
+filter: grayscale(30%);
 }
 
-/* === Panels / Boxes === */
-.box, .panel, .card, .sidebar, .denBox,
-.profile-box, .feature, .container.bg, .main {
-  background: var(--panel-bg) !important; /* Green panels */
-  border: 1px solid var(--forest2) !important;
-  border-radius: 10px !important;
-  color: var(--text-light) !important;
-  padding: 15px;
-  margin: 15px 0;
+img:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+transition-duration: 0.5s;
 }
-
-/* === Headings === */
-h1, h2, h3, h4, header a, .title {
-  color: var(--text-dark) !important; /* Dark green headings for contrast */
-  font-weight: 600 !important;
-}
-
-/* === Muted Text === */
-.muted, small, .meta {
-  color: var(--text-muted) !important;
-}
-
-/* === Links === */
-a { color: var(--text-dark) !important; }  /* Dark green links */
-a:hover { color: var(--forest4) !important; }
-
-/* === Navigation Bar / Banner === */
-header, #header, .navbar {
-  background: var(--forest1) !important;  /* Fully green header */
-  border-bottom: 1px solid var(--forest2) !important;
-  padding: 10px 20px;
-}
-
-/* === Buttons === */
-.button, .btn, button, input[type="submit"] {
-  background: var(--forest1) !important;
-  color: #0f130c !important;
-  border-radius: 6px !important;
-  border: none !important;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-.button:hover, .btn:hover { background: var(--forest4) !important; }
 
 /* === Wolf Image Frames === */
 img[src*="wolves"],
@@ -83,22 +31,136 @@ img[src*="pregnancy"],
 .pack-overview img,
 .den img,
 .wolf img {
-    border: 3px solid var(--forest2) !important;
-    background: var(--forest1) !important;  /* Green background for images */
-    padding: 4px;
-    border-top-left-radius: 100px !important;
-    border-top-right-radius: 100px !important;
-    border-bottom-left-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
+border: 3px solid var(--forest2) !important;
+background: var(--forest1) !important;
+padding: 4px;
+border-top-left-radius: 100px !important;
+border-top-right-radius: 100px !important;
+border-bottom-left-radius: 10px !important;
+border-bottom-right-radius: 10px !important;
 }
-
+/* === Wolf Image Hover Glow === */
+img[src*="wolves"]:hover,
+img[src*="wolf"]:hover,
+img[src*="/wolves/"]:hover,
+img[src*="dynasty"]:hover,
+img[src*="overview"]:hover,
+img[src*="breeding"]:hover,
+img[src*="pupsitting"]:hover,
+img[src*="socializing"]:hover,
+img[src*="nesting"]:hover,
+img[src*="pregnancy"]:hover,
+.packwolves img:hover,
+.pack-overview img:hover,
+.den img:hover,
+.wolf img:hover {
+box-shadow: 0 0 15px 5px rgba(79, 119, 61, 0.7); /* forest green glow */
+transition: box-shadow 0.3s ease-in-out;
+}
 /* === Scrollbar === */
 *::-webkit-scrollbar { width: 10px; }
 *::-webkit-scrollbar-thumb {
-  background: var(--forest1);
-  border-radius: 6px;
+background: var(--forest1);
+border-radius: 6px;
 }
+
+/* --------------- BODY --------------- */
+body {
+background-image: url("[https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=1080](https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=1080)");
+background-position: center;
+background-size: cover !important;
+font-family: 'Cinzel Decorative', serif;
+color: #e5e9c1;
 }
+
+/* --------------- NAVIGATION --------------- */
+#header .navbar-main {
+background-color: rgba(26, 45, 23, 0.85);
+border-radius: 5px 5px 0 0;
+}
+
+.navbar-status {
+background-color: rgba(26, 45, 23, 0.85) !important;
+color: #cddc9b !important;
+font-family: 'Cinzel Decorative', serif;
+border-radius: 0 0 5px 5px;
+}
+
+#header > nav.navbar-status > div {
+font-family: 'MedievalSharp', cursive;
+color: #cddc9b !important;
+}
+
+.navbar-status a { color: #cddc9b !important; }
+
+/* --------------- BREADCRUMB --------------- */
+.breadcrumb-nav {
+background-color: rgba(26, 45, 23, 0.5) !important;
+border-radius: 5px 5px 0 0;
+}
+
+.breadcrumb-item.active {
+color: #d6e2a1 !important;
+font-family: 'Cinzel Decorative', serif;
+}
+
+.breadcrumb::after {
+content: 'CSS by 121945';
+font-family: 'Cinzel Decorative', serif;
+position: absolute;
+zoom: 0.8;
+right: 48px;
+}
+
+a { color: #d6e2a1; }
+
+/* --------------- MAIN --------------- */
+#main { background-color: rgba(40, 58, 28, 0.5) !important; }
+h1 {
+color: #d6e2a1;
+font-size: 50px;
+font-weight: normal;
+font-family: 'Cinzel Decorative', serif;
+text-align: center;
+}
+
+/* ----- NAV TABS ----- */
+.nav-tabs { border: none; justify-content: center; }
+.nav-tabs .nav-link {
+color: #d6e2a1;
+font-family: 'Cinzel Decorative', serif;
+}
+.nav-tabs .nav-link.active {
+background-color: rgba(156, 180, 112, 0.5);
+border-color: rgba(156, 180, 112, 0.7);
+}
+.nav-tabs .nav-link:hover {
+border-color: rgba(156, 180, 112, 0.6);
+background: rgba(156, 180, 112, 0.8);
+}
+
+/* ----- BOXES ----- */
+.boxcontainer { display: flex; justify-content: center; background: none; padding: 0; }
+.Box1, .Box2, .Box3, .Box4, .Box5, .Box6 {
+background-color: var(--forest1);
+color: #e5e9c1;
+border-bottom: 3px solid #7b8a4f;
+border-radius: 3px;
+margin: 5px;
+overflow: hidden;
+transition: .5s;
+padding: 10px;
+text-align: center;
+}
+.Box1 { width: 92%; height: 55px; }
+.Box1:hover { height: 180px; overflow-y: auto; }
+.Box2 { width: 42%; height: 55px; }
+.Box2:hover { height: 180px; overflow-y: auto; }
+.Box3 { width: 24%; height: 55px; }
+.Box3:hover { height: 180px; overflow-y: auto; }
+.Box4 { width: 24%; height: 180px; overflow: auto; }
+.Box5 { width: 42%; height: 180px; overflow: auto; }
+.Box6 { width: 92%; height: 180px; overflow: auto; }
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,7 +170,20 @@ img[src*="pregnancy"],
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Forest!</h1>
-    <p>This page uses your custom forest theme CSS.</p>
+    <div class="main container">
+        <h1>Welcome to the Forest!</h1>
+        <p>This page is styled with a dark green forest theme, glassy panels, and elegant buttons.</p>
+
+        <div class="box">
+            <h2>Panel Example</h2>
+            <p>This is a panel with semi-transparent background and blurred backdrop.</p>
+            <button class="btn">Click Me</button>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Forest Image">
+
+        <p class="muted">This is muted text for secondary info.</p>
+    </div>
 </body>
 </html>
+

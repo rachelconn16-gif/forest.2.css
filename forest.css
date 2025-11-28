@@ -1,83 +1,193 @@
-/* --- Dark-Forest + Green Theme CSS --- */
+/* ============================================
+   DARK FOREST GREEN THEME — FULL CSS FILE
+   ============================================ */
 
-/* Set background to dark forest image */
-body {
-  background: url('https://tse4.mm.bing.net/th/id/OIP.yNmpcRaiz-xI7wowpCYQowHaEo?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center fixed;
-  background-size: cover;
-  color: #e0f2e9; /* light green-ish text for readability */
-  /* optionally add overlay for contrast: */
-  background-color: #001a0d; /* deep dark green/forest base */
+/* --- GLOBAL --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #dfffe8;
+  background: url('https://tse4.mm.bing.net/th/id/OIP.yNmpcRaiz-xI7wowpCYQowHaEo?rs=1&pid=ImgDetMain&o=7&rm=3')
+              center center / cover no-repeat fixed;
+  background-color: #001a0d; /* deep overlay */
   background-blend-mode: overlay;
 }
 
-/* General link / accent colors: various greens */
-a, .accent, .button {
-  color: #6dbc5a;  /* medium green */
+/* Smooth transitions for UI */
+body, button, input, a, div {
+  transition: 0.25s ease;
 }
 
-a:hover, .button:hover {
-  color: #8fe68f;  /* lighter green on hover */
-}
+/* --- TEXT --- */
 
-/* Example: headers */
 h1, h2, h3, h4, h5, h6 {
-  color: #a8e0b0;
+  color: #b8f5c4;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
-/* Wolf icon — make circular */
-/* Assuming icon has class .wolf-icon or similar — change as needed */
-.wolf-icon {
-  width: 64px;       /* or whatever size is used */
-  height: 64px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: inline-block;
-  background-size: cover;
-  background-position: center center;
+p {
+  margin: 0.6em 0;
+  line-height: 1.5em;
+  color: #e4ffe9;
 }
 
-/* If using <img> for the wolf icon: */
-.wolf-icon img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  display: block;
+a {
+  color: #65d984;
+  text-decoration: none;
 }
 
-/* Optional: cards, containers, panels etc — give dark-greenish background with opacity */
-.card, .panel, .container {
-  background-color: rgba(0, 32, 16, 0.75); /* translucent deep green/black */
-  border: 1px solid #265b3a; /* darker green border */
-  color: #d8f3dc;
+a:hover {
+  color: #8fffac;
 }
 
-/* Buttons / UI controls */
-.button, button, input[type="button"], input[type="submit"] {
-  background-color: #265b3a;
-  color: #e0f2e9;
-  border: 1px solid #4f8b5a;
-}
+/* --- LAYOUT ELEMENTS --- */
 
-.button:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover {
-  background-color: #4f8b5a;
-  color: #ffffff;
-}
-
-/* Example: navigation bar */
+/* NAVIGATION BAR */
 .navbar {
-  background-color: rgba(0, 25, 12, 0.85);
-  border-bottom: 1px solid #3b6e4f;
+  width: 100%;
+  background: rgba(0, 25, 12, 0.88);
+  border-bottom: 1px solid #2f6b48;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Example: footer */
+.navbar a {
+  margin: 0 12px;
+  color: #bdf8c5;
+}
+
+.navbar a:hover {
+  color: #e2ffe6;
+}
+
+/* FOOTER */
 .footer {
-  background-color: rgba(0, 25, 12, 0.85);
-  border-top: 1px solid #3b6e4f;
-  color: #a8e0b0;
+  background: rgba(0, 25, 12, 0.88);
+  border-top: 1px solid #2f6b48;
+  padding: 20px;
+  text-align: center;
+  color: #99e5a7;
 }
 
-/* Remove “made by” section — if there was a footer or signature, hide it */
-/* Example: if there was an element with class .signature or #made-by — hide it: */
-.signature, #made-by, .footer .credit {
+/* Remove "made by" or any similar credits */
+.footer .credit,
+#made-by,
+.signature {
   display: none !important;
 }
+
+/* --- CONTENT CONTAINERS --- */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.card {
+  background: rgba(0, 28, 14, 0.75);
+  border: 1px solid #2c6844;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #dfffe8;
+  backdrop-filter: blur(4px);
+}
+
+.card:hover {
+  background: rgba(0, 35, 18, 0.80);
+  border-color: #3d8a5b;
+}
+
+/* --- WOLF ICON (CIRCULAR) --- */
+
+.wolf-icon, .wolf-icon img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wolf-icon {
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+/* --- BUTTONS --- */
+
+button,
+.btn,
+input[type="submit"],
+input[type="button"] {
+  background: #235a37;
+  color: #e5ffee;
+  padding: 10px 20px;
+  border: 1px solid #3b8a57;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  background: #3c8e59;
+  color: white;
+}
+
+/* --- FORMS --- */
+
+input, textarea, select {
+  background: rgba(0, 32, 16, 0.85);
+  border: 1px solid #2f6b48;
+  color: #dfffe8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #66d98b;
+  outline: none;
+}
+
+/* --- TABLES --- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #2e6d49;
+}
+
+th {
+  background: rgba(0, 40, 20, 0.85);
+  color: #b9f7c4;
+}
+
+td {
+  background: rgba(0, 25, 12, 0.7);
+}
+
+/* --- UTILITY CLASSES --- */
+
+.text-green { color: #7ef58f; }
+.bg-green { background: #0f3c20; }
+.center { text-align: center; }
+.round { border-radius: 50%; }
+.shadow { box-shadow: 0 0 14px rgba(0, 0, 0, 0.55); }

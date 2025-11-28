@@ -1,74 +1,83 @@
-/* ===== TRANSPARENT GLOW BANNER ===== */
-#main h1, #main h2.page-title {
-background: rgba(15, 40, 20, 0.45) !important;
-padding: 12px 20px !important;
-border-bottom: 2px solid #1e3a24 !important;
-box-shadow: 0 0 20px #1e5c2f !important;
-text-shadow: 0 0 10px #1e8c4f !important;
-border-radius: 10px;
+/* --- Dark-Forest + Green Theme CSS --- */
+
+/* Set background to dark forest image */
+body {
+  background: url('https://tse4.mm.bing.net/th/id/OIP.yNmpcRaiz-xI7wowpCYQowHaEo?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0f2e9; /* light green-ish text for readability */
+  /* optionally add overlay for contrast: */
+  background-color: #001a0d; /* deep dark green/forest base */
+  background-blend-mode: overlay;
 }
 
-
-/* ===== PANELS / CONTAINERS ===== */
-.sidebar { background: rgba(10, 30, 15, 0.20) !important; }
-
-
-.main, .sidebar, .box, .content, .table, .table .row, .container {
-background: rgba(10, 30, 15, 0.30) !important;
-border: 2px solid #194d2c !important;
-border-radius: 20px !important;
-box-shadow: 0 0 15px #145c33 !important;
+/* General link / accent colors: various greens */
+a, .accent, .button {
+  color: #6dbc5a;  /* medium green */
 }
 
-
-/* ===== TEXT COLOR ===== */
-body, h1, h2, h3, p, a, span, div {
-color: #f2f2e9 !important;
+a:hover, .button:hover {
+  color: #8fe68f;  /* lighter green on hover */
 }
 
-
-/* ===== WOLF CIRCULAR PORTRAITS ===== */
-.wolf-avatar, .lead-wolf img, img[src*="dynasty"], .featured-wolf img {
-width: 200px !important;
-height: 200px !important;
-border-radius: 50% !important;
-border: 4px solid #1e5c2f !important;
-box-shadow: 0 0 20px #1e5c2f !important;
-object-fit: cover !important;
+/* Example: headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #a8e0b0;
 }
 
-
-/* ===== NAVIGATION HALF-OVALS ===== */
-.navbar a, .menu-item, #sidebar a[href*="overview"], #sidebar a[href*="breeding"], #sidebar a[href*="dynasty"], #sidebar a[href*="pupsitting"], #sidebar a[href*="nesting"], #sidebar a[href*="socializing"] {
-display: inline-block !important;
-padding: 8px 14px !important;
-background: rgba(20, 60, 30, 0.6) !important;
-border: 2px solid #1e5c2f !important;
-border-radius: 0 0 40px 40px !important;
-box-shadow: 0 0 12px #1e5c2f !important;
-color: #f2f2e9 !important;
-margin: 3px !important;
-}
-.navbar a:hover, .menu-item:hover, #sidebar a:hover {
-background: rgba(25, 80, 40, 0.8) !important;
+/* Wolf icon — make circular */
+/* Assuming icon has class .wolf-icon or similar — change as needed */
+.wolf-icon {
+  width: 64px;       /* or whatever size is used */
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
 }
 
-
-/* ===== STATS BARS (energy/hunger/hp/exp) ===== */
-.energyBar, .hungerBar, .hpBar, .expBar, .bar, .progress {
-background: #0f2716 !important;
-border-radius: 10px !important;
-border: 1px solid #1e5c2f !important;
-overflow: hidden !important;
-}
-.energyBar .fill, .hungerBar .fill, .hpBar .fill, .expBar .fill, .bar .fill, .progress div {
-background: #1e8c4f !important;
-height: 18px !important;
-box-shadow: inset 0 0 10px #145c33 !important;
+/* If using <img> for the wolf icon: */
+.wolf-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
 }
 
+/* Optional: cards, containers, panels etc — give dark-greenish background with opacity */
+.card, .panel, .container {
+  background-color: rgba(0, 32, 16, 0.75); /* translucent deep green/black */
+  border: 1px solid #265b3a; /* darker green border */
+  color: #d8f3dc;
+}
 
-/* ===== ICONS — tinted green ===== */
-img.icon, .small-icon, img[src*="icon"] {
-filter: brightness(0) saturate(100%) invert(30%) sepia(50%) saturate(500%) hue-rotate(95deg) brightness(95%) contrast(90%) !important;
+/* Buttons / UI controls */
+.button, button, input[type="button"], input[type="submit"] {
+  background-color: #265b3a;
+  color: #e0f2e9;
+  border: 1px solid #4f8b5a;
+}
+
+.button:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #4f8b5a;
+  color: #ffffff;
+}
+
+/* Example: navigation bar */
+.navbar {
+  background-color: rgba(0, 25, 12, 0.85);
+  border-bottom: 1px solid #3b6e4f;
+}
+
+/* Example: footer */
+.footer {
+  background-color: rgba(0, 25, 12, 0.85);
+  border-top: 1px solid #3b6e4f;
+  color: #a8e0b0;
+}
+
+/* Remove “made by” section — if there was a footer or signature, hide it */
+/* Example: if there was an element with class .signature or #made-by — hide it: */
+.signature, #made-by, .footer .credit {
+  display: none !important;
 }

@@ -250,3 +250,21 @@ div[style*="background-color:#28a745"],
 div[style*="background-color: rgb(40, 167, 69)"] {
     background-color: var(--accent-brown) !important;
 }
+/* ================= REMOVE BLUE FROM SELECT DROPDOWNS ================= */
+
+select,
+select:focus,
+select option,
+select option:checked,
+select option:hover {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+    border: 1px solid rgba(95, 115, 85, 1) !important;
+    outline: none !important;
+}
+
+/* Some browsers apply their own highlight color */
+select option:checked {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: var(--text-light) !important;
+}

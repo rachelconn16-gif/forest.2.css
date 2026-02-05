@@ -212,28 +212,9 @@ span.bg-info {
     color: var(--text-light) !important;
 }
 
-/* Sorting bar (Age Descending) */
-#main select,
-#main .form-control {
-    background-color: rgba(55, 65, 45, 1) !important;
-    color: var(--text-light) !important;
-    border: 2px solid rgba(95, 115, 85, 1) !important;
-}
-
 /* Fix text inside info panels */
 .bg-info *,
 .alert-info * {
     color: var(--text-light) !important;
 }
-/* ================= RESTORE HP BAR COLOR ================= */
 
-/* HP progress bar specifically */
-.progress-bar.bg-danger,
-.progress-bar[style*="background-color"] {
-    background-color: rgba(170, 60, 60, 1) !important;
-}
-
-/* HP container (optional, keeps contrast clean) */
-.progress {
-    background-color: rgba(20, 20, 20, 0.9) !important;
-}

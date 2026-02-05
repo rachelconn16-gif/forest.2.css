@@ -1,32 +1,43 @@
-/* ---------- COLOR PALETTE ---------- */
+/* ================= GLOBAL COLOR PALETTE ================ */
 :root {
-    --text-main: rgba(185, 205, 170, 1);      /* soft moss green */
-    --text-light: rgba(215, 230, 200, 1);     /* pale green */
-    --text-dark: rgba(135, 155, 120, 1);      /* muted olive */
+    --text-main: rgba(185, 205, 170, 1);
+    --text-light: rgba(215, 230, 200, 1);
+    --text-dark: rgba(135, 155, 120, 1);
 
-    --bg-dark: rgba(30, 35, 25, 0.9);         /* deep forest */
-    --bg-mid: rgba(55, 65, 45, 0.9);          /* moss */
-    --bg-light: rgba(95, 105, 75, 0.5);       /* bark tint */
+    --bg-dark: rgba(30, 35, 25, 0.9);
+    --bg-mid: rgba(55, 65, 45, 0.9);
+    --bg-light: rgba(95, 105, 75, 0.5);
 
-    --accent-brown: rgba(110, 90, 60, 1);     /* wood */
+    --accent-brown: rgba(110, 90, 60, 1);
 }
 
-/* ---------- GLOBAL ---------- */
+/* ================= BACKGROUND + CURSOR ================ */
 body {
-    background-image: url("https://tse4.mm.bing.net/th/id/OIP.sSip4lrV09RP4haQE1d38gHaFj?rs=1&pid=ImgDetMain&o=7&rm=3");
-    background-position: center;
-    background-size: cover !important;
+    background: url("https://tse4.mm.bing.net/th/id/OIP.WA22kBn2M7CxxbOqk9_2PAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3")
+        no-repeat center/cover fixed !important;
     cursor: url("https://www.rw-designer.com/cursor-view/15866.png"), auto;
     color: var(--text-main);
+    margin: 0;
 }
 
+/* ================= TITLE + CREDIT ================ */
 h1 {
     font-size: 40px;
     text-align: center;
     color: var(--text-light);
+    text-shadow: 0 0 8px rgba(40, 50, 30, 0.9);
 }
 
-/* ---------- LINKS ---------- */
+.breadcrumb::after {
+    content: "CSS by 148046";
+    position: absolute;
+    right: 35px;
+    font-weight: bold;
+    color: var(--accent-brown);
+    text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
+}
+
+/* ================= LINKS ================ */
 a {
     color: var(--text-main);
     font-weight: bold;
@@ -36,25 +47,39 @@ a:hover {
     color: var(--text-dark);
 }
 
-/* ---------- HEADER & NAV ---------- */
-#header .navbar-main, #footer {
-    background-color: transparent;
+/* ================= NAVIGATION BAR AS SINGLE STRIP ================ */
+#header .navbar-main {
+    background-color: rgba(40, 45, 30, 0.85);
+    border: 2px solid rgba(20, 25, 15, 1);
+    border-radius: 25px;
+    padding: 6px 12px;
 }
 
 #header .navbar-main .nav-link,
 #header .navbar-main .nav-link .fa {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
     color: var(--text-main);
-    background-color: var(--bg-mid);
-    border: solid 2px var(--bg-dark);
-    border-radius: 20px;
 }
 
 #header .navbar-main .nav-link:hover,
 #header .navbar-main .nav-link:hover .fa {
     color: var(--text-light);
+    text-shadow: 0 0 6px var(--text-main);
 }
 
-/* ---------- STATUS BAR ---------- */
+#header .navbar-main .nav-item {
+    margin: 0 8px;
+}
+
+#footer nav .nav-link {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* ================= STATUS BAR ================ */
 .navbar-status {
     background-color: var(--bg-mid) !important;
     color: var(--text-main) !important;
@@ -65,14 +90,14 @@ a:hover {
     color: var(--text-main) !important;
 }
 
-/* ---------- MAIN CONTENT ---------- */
+/* ================= MAIN CONTENT ================ */
 #main {
     background-color: var(--bg-dark);
     border-radius: 0px 10px 0px 10px;
     border: solid 2px rgba(0, 0, 0, 0.8);
 }
 
-/* ---------- TABLES ---------- */
+/* ================= TABLES ================ */
 .table {
     background-color: var(--bg-mid);
     border-radius: 20px;
@@ -92,7 +117,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- CARDS ---------- */
+/* ================= CARDS ================ */
 .card,
 #sidebar .card {
     background-color: var(--bg-mid);
@@ -109,14 +134,14 @@ a:hover {
     box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
-/* ---------- SIDEBAR ---------- */
+/* ================= SIDEBAR ================ */
 #sidebar {
     background-color: var(--bg-dark);
     border-radius: 10px 0px 10px 0px;
     border: solid 2px rgba(0, 0, 0, 0.8);
 }
 
-/* ---------- PROGRESS BARS ---------- */
+/* ================= PROGRESS BARS ================ */
 .progress {
     background: rgba(0, 0, 0, 0.8) !important;
 }
@@ -129,7 +154,7 @@ a:hover {
     background-color: var(--accent-brown) !important;
 }
 
-/* ---------- CHAT ---------- */
+/* ================= CHAT ================ */
 .s-chat-message:nth-child(odd) {
     background: rgba(60, 70, 45, 1);
 }
@@ -143,7 +168,7 @@ a:hover {
     color: var(--text-light);
 }
 
-/* ---------- BUTTONS ---------- */
+/* ================= BUTTONS ================ */
 .btn-info,
 .btn-primary,
 .btn-success,

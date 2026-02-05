@@ -19,7 +19,7 @@ body {
 }
 
 body, .table th, .nav-tabs .nav-link.active {
-    background:url("https://wallpapers.com/images/hd/renaissance-background-2wcwx3q79ive9325.jpg")
+    background:url("https://th.bing.com/th/id/OIP.A4Il9bBD1ipbUfHI4N_hagHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3")
     center fixed !important;
     background-size:cover !important;
     color: rgba(200, 220, 240, 1);
@@ -123,7 +123,7 @@ a:hover {
 
 /* ç¬¬äºŒå¤§ä¸»æ¿ */
 .table {
-  background-image: url(https://wallpapers.com/images/hd/renaissance-background-2wcwx3q79ive9325.jpg)!important;
+  background-image: url(https://th.bing.com/th/id/OIP.A4Il9bBD1ipbUfHI4N_hagHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3)!important;
   background-blend-mode:overlay;
   background-color: rgba(55, 65, 75, 1);
 	border-radius: 20px;
@@ -186,7 +186,7 @@ background-color: rgba(145, 165, 175 ,0.4)!important;
 
 /* è¾¹åŒºå¡ç‰‡åº•è‰² */
 #sidebar .card {
-  background-image: url(https://wallpapers.com/images/hd/renaissance-background-2wcwx3q79ive9325.jpg)!important;
+  background-image: url(https://th.bing.com/th/id/OIP.A4Il9bBD1ipbUfHI4N_hagHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3)!important;
   background-blend-mode:overlay;
   background-color: rgba(35, 45, 55, 1);
 	border-radius: 20px;

@@ -185,19 +185,20 @@ a:hover {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
-/* ================= FORCE AGE SORT BAR CONTAINER ================= */
+/* ================= AGE DESCENDING OUTER BAR FIX ================= */
 
-/* The exact blue container around Age Descending */
-#main .card-body.bg-info,
-#main .card.mb-3 .card-body,
-#main .card.mb-3 {
+/* The outer strip/container */
+#main .card-header,
+#main .card-header.bg-info,
+#main .bg-info.card,
+#main .bg-info.card-header {
     background-color: rgba(55, 65, 45, 0.95) !important;
     border: 2px solid rgba(95, 115, 85, 1) !important;
     color: rgba(215, 230, 200, 1) !important;
 }
 
-/* Ensure text inside matches */
-#main .card-body.bg-info *,
-#main .card.mb-3 * {
+/* Text inside that bar */
+#main .card-header *,
+#main .bg-info.card-header * {
     color: rgba(215, 230, 200, 1) !important;
 }

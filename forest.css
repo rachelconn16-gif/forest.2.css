@@ -1,33 +1,31 @@
-<style>
-/* Full‑page background */
+/* Full-page background */
 body, html {
-   background-image: url('https://wallpaperaccess.com/full/1523923.png');
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center;
-   color: #000000 !important;
-   font-family: "Geo", serif;
-   cursor: url('https://cur.cursors-4u.net/symbols/sym-6/sym579.cur'), auto !important;
+    background-image: url("https://wallpaperaccess.com/full/1523923.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #000000 !important;
+    font-family: "Geo", serif;
+    cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym579.cur"), auto !important;
 }
 
 /* Header bar */
 #header .navbar-main {
-   background-color: #FFC260;
-   border-radius: 10px 10px 0 0;
+    background-color: #FFC260;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Sidebar cards */
 #sidebar .card {
-   background-color: #FFAE2D;
-   border-bottom: 6px solid #FFDDBB;
-   border-radius: 5px;
+    background-color: #FFAE2D;
+    border-bottom: 6px solid #FFDDBB;
+    border-radius: 5px;
 }
 
 /* Table headers */
 table th {
-   background-color: #3A1F04;
-   border-bottom: 3px dashed #362312;
-   color: #F2E9E4 !important;
+    background-color: #3A1F04;
+    border-bottom: 3px dashed #362312;
+    color: #F2E9E4 !important;
 }
-</style>

@@ -1,11 +1,15 @@
 /* =========================
-   Import Geo Font
+   FONT IMPORT
    ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Geo&display=swap");
 
 /* =========================
-   Full Page Background
+   GLOBAL SETTINGS
    ========================= */
+* {
+    font-family: "Geo", serif !important;
+}
+
 body, html {
     background-image: url("https://wallpaperaccess.com/full/1523923.png");
     background-size: cover;
@@ -13,69 +17,114 @@ body, html {
     background-attachment: fixed;
     background-position: center;
     color: #2B1A0A !important;
-    font-family: "Geo", serif !important;
     cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym579.cur"), auto !important;
 }
 
-/* Force font everywhere (Wolvden overrides aggressively) */
-* {
-    font-family: "Geo", serif !important;
-}
-
-/* =========================
-   Make site wrapper transparent
-   ========================= */
+/* Remove Wolvden gray base */
 #container {
     background: transparent !important;
 }
 
 /* =========================
-   Header (solid)
+   HEADER
    ========================= */
+
+/* Logo bar (untouched color, safe) */
 #header .navbar-main {
     background-color: #FFC260 !important;
     border-radius: 10px 10px 0 0;
     border-bottom: 4px solid #FFDDBB;
-    opacity: 1;
+    position: relative;
+    z-index: 10;
+}
+
+/* Status / blue bar → black */
+.navbar-status,
+.navbar-default,
+#header .navbar:not(.navbar-main) {
+    background-color: #000000 !important;
+    border: none;
 }
 
 /* =========================
-   Main Content Box
+   MAIN CONTENT + SIDEBAR
    ========================= */
-#content {
+
+/* All dark gray backdrops → yellow */
+#content,
+#content .container,
+#content .row,
+#content .card,
+#content .box,
+#content .panel,
+#sidebar .card {
     background-color: #FFAE2D !important;
-    opacity: 0.85;
+    opacity: 0.4;
     border-radius: 10px;
     border: 2px solid #FFDDBB;
 }
 
-/* =========================
-   Sidebar Cards
-   ========================= */
-#sidebar .card {
-    background-color: #FFAE2D !important;
-    opacity: 0.85;
-    border-bottom: 6px solid #FFDDBB;
-    border-radius: 8px;
+/* Restore text clarity */
+#content *,
+#sidebar .card * {
+    opacity: 1 !important;
 }
 
 /* =========================
-   Generic Wolvden Boxes
+   FEATURE TILES (Pack Dynasty, Breeding, etc.)
    ========================= */
-.card,
-.box,
-.panel,
-.alert,
-.breadcrumb,
-.table {
+.feature,
+.feature .panel,
+.feature .card,
+.feature-tile,
+.feature-container {
     background-color: #FFAE2D !important;
-    opacity: 0.85;
-    border-radius: 8px;
+    opacity: 0.4;
+    border-radius: 10px;
     border: 2px solid #FFDDBB;
 }
 
+/* Keep text readable */
+.feature *,
+.feature-tile * {
+    opacity: 1 !important;
+}
+
 /* =========================
-   Tables
+   CAVES
+   ========================= */
+
+/* Cave container uses main background image */
+.cave,
+.cave-container,
+.cave-content,
+.cave .panel {
+    background-image: url("https://wallpaperaccess.com/full/1523923.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    border-radius: 12px;
+    border: 2px solid #FFDDBB;
+}
+
+/* Inner cave panels stay yellow & translucent */
+.cave .card,
+.cave .box,
+.cave .wolf-card {
+    background-color: #FFAE2D !important;
+    opacity: 0.4;
+    border-radius: 8px;
+}
+
+/* Restore wolf card text */
+.cave .card *,
+.cave .box *,
+.cave .wolf-card * {
+    opacity: 1 !important;
+}
+
+/* =========================
+   TABLES
    ========================= */
 table {
     background-color: #FFDDBB !important;
@@ -95,21 +144,7 @@ table td {
 }
 
 /* =========================
-   Restore Text Opacity
-   ========================= */
-#content *,
-#sidebar .card *,
-.card *,
-.box *,
-.panel *,
-.alert *,
-.breadcrumb *,
-.table * {
-    opacity: 1 !important;
-}
-
-/* =========================
-   Links
+   LINKS
    ========================= */
 a,
 a:visited {

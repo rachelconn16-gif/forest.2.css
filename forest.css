@@ -1,97 +1,25 @@
- /* --------------- NAVIGATION (TOP OF PAGE) --------------- */
- 
-    
-    #header .navbar-main {
-        
-        background-color: #222916;
-        border-radius: 5px 5px 0px 0px;
+<style>
+body {
+   background-image: url('https://wallpaperaccess.com/full/1523923.png');
+   color: #000000 !important;
+   font-family: "Geo", serif;
+   cursor: url('https://cur.cursors-4u.net/symbols/sym-6/sym579.cur'), auto !important;
 }
-        
-    .navbar-status {
-            
-       background-color: #222916!important;
-       color: #525e2e!important;
-       font-family: 'MedievalSharp';
-       border-radius: 0px 0px 5px 5px;    
+
+#header .navbar-main {
+   background-color: #FFC260;
+   border-radius: 10px 10px 0 0;
 }
-  
-    #header > nav.navbar.navbar-status.navbar-expand > div { /* For Player Username */
-        
-       font-family: 'Grenze Gotisch';
-       color: #525e2e!important;
-        
+
+#sidebar .card {
+   background-color: #FFAE2D;
+   border-bottom: 6px solid #FFDDBB;
+   border-radius: 5px;
 }
-    .navbar-status a {
-        
-       color: #525e2e!important;
-        
-}     
-  /* --------------- SIDEBAR --------------- */
-     
-    #sidebar {
-        
-        background-color: rgb(1, 1, 1, 0)!important;   
-        
-    }
-    #sidebar .card {
-        
-       background-color: #222916;
-        border-radius: 5px;
-        border-color: #151a0e;
-        color: #525e2e;
-        
-    }
-    #sidebar h3, #sidebar h4 {
-        color: #79883b;
-        font-family: 'Grenze Gotisch';
-    }
-    #sidebar .card a {
-        color: #79883b;
-    }
-        
-    #sidebar > div.multi-column.no-gutters > div:nth-child(1) > a > div {
-        background-color: #455c1f;
-    }
-        
-     #chatMessagePinned.s-chat-message__pinned {
-        
-        background-color: #d3ed85;
-        color: #b1c27e;
-        border: none;
-    }
-     #chatMessagePinned.s-chat-message__pinned a {
-        
-        color: #b1c27e;
-          
-    }
-    #btnChatSend {
-        
-         background-color: #a6a75f!important;
-        border-color: #868838;
-        
-    }
-    #fraChatSettings i {
-        
-      color: #525e2e!important;
-    }
-   #btnToggleSidebarChat i {
-        
-        color: #525e2e!important;
-    }
-    
-     #card-user > div > div > div:nth-child(1) > div > a > img/* Border featured wolf in Sidebar */ {
-    border: 1px solid #151a0e!important;
-         border-radius: 0px!important;
-        
+
+table th {
+   background-color: #3A1F04;
+   border-bottom: 3px dashed #362312;
+   color: #F2E9E4 !important;
 }
-    #card-user > div > div > div:nth-child(1) > a > img {
-        
-        border-radius: 0px!important;
-        border: 1px solid #151a0e!important;
-    }
-  
-     .card-body .w-50:first-child div /* Border featured wolf in Sidebar */ {
-    border: none !important;
-        
-}
-    
+</style>

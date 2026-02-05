@@ -185,48 +185,43 @@ a:hover {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
-/* ================= NOTIFICATIONS / ALERTS ================= */
-.alert {
-    background-color: rgba(55, 65, 45, 0.95);
-    color: var(--text-light);
-    border: 2px solid rgba(95, 115, 85, 1);
-    border-radius: 20px;
+/* ================= FORUM NOTIFICATIONS ================= */
+
+/* Notification number badge (bell counter) */
+.badge,
+.badge-danger,
+.badge-primary {
+    background-color: rgba(65, 85, 55, 1) !important;
+    color: rgba(215, 235, 210, 1) !important;
+    border-radius: 12px;
 }
 
-/* Success (food fed, pups played, etc.) */
-.alert-success {
-    background-color: rgba(65, 85, 55, 0.95);
-    border-color: rgba(110, 140, 95, 1);
-    color: var(--text-light);
+/* Notification dropdown background */
+.dropdown-menu.notification-menu,
+.dropdown-menu.notifications,
+.dropdown-menu.show {
+    background-color: rgba(30, 35, 25, 0.95);
+    border: 2px solid rgba(65, 85, 55, 1);
 }
 
-/* Info (messages, updates) */
-.alert-info {
-    background-color: rgba(55, 75, 65, 0.95);
-    border-color: rgba(95, 125, 115, 1);
-    color: var(--text-light);
-}
-
-/* Warning (energy low, cooldowns) */
-.alert-warning {
-    background-color: rgba(85, 75, 45, 0.95);
-    border-color: rgba(145, 125, 75, 1);
-    color: var(--text-light);
-}
-
-/* Danger (errors, rollbacks) */
-.alert-danger {
-    background-color: rgba(75, 55, 45, 0.95);
-    border-color: rgba(145, 95, 75, 1);
-    color: var(--text-light);
-}
-
-/* Links inside notifications */
-.alert a {
-    color: rgba(215, 235, 210, 1);
-    font-weight: bold;
-}
-
-.alert a:hover {
+/* Individual forum notification items */
+.dropdown-item.notification,
+.notification-item,
+.dropdown-item {
+    background-color: transparent;
     color: rgba(185, 205, 170, 1);
+}
+
+/* Hover state */
+.dropdown-item.notification:hover,
+.notification-item:hover,
+.dropdown-item:hover {
+    background-color: rgba(65, 85, 55, 0.4);
+    color: rgba(215, 235, 210, 1);
+}
+
+/* Notification timestamps / muted text */
+.notification-time,
+.text-muted {
+    color: rgba(145, 165, 130, 1) !important;
 }

@@ -1,4 +1,11 @@
-/* ===== Background ===== */
+/* =========================
+   Import Geo Font
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Geo&display=swap");
+
+/* =========================
+   Full Page Background
+   ========================= */
 body, html {
     background-image: url("https://wallpaperaccess.com/full/1523923.png");
     background-size: cover;
@@ -6,63 +13,104 @@ body, html {
     background-attachment: fixed;
     background-position: center;
     color: #2B1A0A !important;
-    font-family: "Geo", serif;
+    font-family: "Geo", serif !important;
     cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym579.cur"), auto !important;
 }
 
-/* Make main container transparent */
+/* Force font everywhere (Wolvden overrides aggressively) */
+* {
+    font-family: "Geo", serif !important;
+}
+
+/* =========================
+   Make site wrapper transparent
+   ========================= */
 #container {
     background: transparent !important;
 }
 
-/* ===== Header ===== */
+/* =========================
+   Header (solid)
+   ========================= */
 #header .navbar-main {
-    background-color: rgba(255, 194, 96, 0.95);
-    border-radius: 12px 12px 0 0;
+    background-color: #FFC260 !important;
+    border-radius: 10px 10px 0 0;
     border-bottom: 4px solid #FFDDBB;
+    opacity: 1;
 }
 
-/* ===== Main Content Boxes (opacity lowered) ===== */
-#content,
-#content .card,
-.table,
+/* =========================
+   Main Content Box
+   ========================= */
+#content {
+    background-color: #FFAE2D !important;
+    opacity: 0.85;
+    border-radius: 10px;
+    border: 2px solid #FFDDBB;
+}
+
+/* =========================
+   Sidebar Cards
+   ========================= */
+#sidebar .card {
+    background-color: #FFAE2D !important;
+    opacity: 0.85;
+    border-bottom: 6px solid #FFDDBB;
+    border-radius: 8px;
+}
+
+/* =========================
+   Generic Wolvden Boxes
+   ========================= */
+.card,
+.box,
+.panel,
 .alert,
 .breadcrumb,
-.box,
-.panel {
-    background-color: rgba(255, 174, 45, 0.78) !important;
-    border: 2px solid #FFDDBB;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(58, 31, 4, 0.25);
-}
-
-/* ===== Sidebar ===== */
-#sidebar .card {
-    background-color: rgba(255, 174, 45, 0.85);
-    border-bottom: 6px solid #FFDDBB;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(58, 31, 4, 0.25);
-}
-
-/* ===== Tables ===== */
-table {
-    background-color: rgba(255, 221, 187, 0.6);
+.table {
+    background-color: #FFAE2D !important;
+    opacity: 0.85;
     border-radius: 8px;
-    overflow: hidden;
+    border: 2px solid #FFDDBB;
+}
+
+/* =========================
+   Tables
+   ========================= */
+table {
+    background-color: #FFDDBB !important;
+    opacity: 0.9;
+    border-radius: 6px;
 }
 
 table th {
-    background-color: #3A1F04;
+    background-color: #3A1F04 !important;
     border-bottom: 3px dashed #362312;
     color: #F2E9E4 !important;
 }
 
 table td {
-    background-color: rgba(255, 221, 187, 0.75);
+    background-color: transparent !important;
     color: #2B1A0A;
 }
 
-/* ===== Links ===== */
+/* =========================
+   Restore Text Opacity
+   ========================= */
+#content *,
+#sidebar .card *,
+.card *,
+.box *,
+.panel *,
+.alert *,
+.breadcrumb *,
+.table * {
+    opacity: 1 !important;
+}
+
+/* =========================
+   Links
+   ========================= */
 a,
 a:visited {
     color: #7A3E00;
@@ -70,36 +118,5 @@ a:visited {
 
 a:hover {
     color: #B35A00;
-    text-shadow: 0 0 4px rgba(255, 221, 187, 0.8);
-}
-
-/* ===== Inputs & Buttons ===== */
-input,
-select,
-textarea {
-    background-color: rgba(255, 221, 187, 0.85);
-    border: 2px solid #FFAE2D;
-    border-radius: 6px;
-    color: #2B1A0A;
-}
-
-button,
-.btn {
-    background-color: #FFC260;
-    border: 2px solid #FFAE2D;
-    border-radius: 8px;
-    color: #3A1F04;
-}
-
-button:hover,
-.btn:hover {
-    background-color: #FFAE2D;
-    box-shadow: 0 0 8px rgba(255, 221, 187, 0.8);
-}
-
-/* ===== Footer ===== */
-#footer {
-    background-color: rgba(58, 31, 4, 0.85);
-    color: #F2E9E4;
-    border-radius: 0 0 12px 12px;
+    text-decoration: none;
 }

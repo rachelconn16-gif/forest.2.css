@@ -185,43 +185,32 @@ a:hover {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
-/* ================= FORUM NOTIFICATIONS ================= */
+/* ================= FORUM TOP NOTIFICATION BANNER ================= */
 
-/* Notification number badge (bell counter) */
-.badge,
-.badge-danger,
-.badge-primary {
-    background-color: rgba(65, 85, 55, 1) !important;
+/* Forum notification bar */
+.forum-notification,
+.notification,
+.alert-info.forum,
+#forums .alert,
+#forums .alert-info {
+    background-color: rgba(55, 65, 45, 0.95) !important;
     color: rgba(215, 235, 210, 1) !important;
-    border-radius: 12px;
+    border: 2px solid rgba(95, 115, 85, 1) !important;
+    border-radius: 15px;
 }
 
-/* Notification dropdown background */
-.dropdown-menu.notification-menu,
-.dropdown-menu.notifications,
-.dropdown-menu.show {
-    background-color: rgba(30, 35, 25, 0.95);
-    border: 2px solid rgba(65, 85, 55, 1);
+/* Text inside the forum notification */
+.forum-notification a,
+.notification a,
+#forums .alert a {
+    color: rgba(185, 205, 170, 1) !important;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-/* Individual forum notification items */
-.dropdown-item.notification,
-.notification-item,
-.dropdown-item {
-    background-color: transparent;
-    color: rgba(185, 205, 170, 1);
-}
-
-/* Hover state */
-.dropdown-item.notification:hover,
-.notification-item:hover,
-.dropdown-item:hover {
-    background-color: rgba(65, 85, 55, 0.4);
-    color: rgba(215, 235, 210, 1);
-}
-
-/* Notification timestamps / muted text */
-.notification-time,
-.text-muted {
-    color: rgba(145, 165, 130, 1) !important;
+.forum-notification a:hover,
+.notification a:hover,
+#forums .alert a:hover {
+    color: rgba(215, 235, 210, 1) !important;
+    text-shadow: 0 0 5px rgba(110, 140, 95, 0.8);
 }

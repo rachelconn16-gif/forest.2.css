@@ -250,20 +250,3 @@ div[style*="background-color:#28a745"],
 div[style*="background-color: rgb(40, 167, 69)"] {
     background-color: var(--accent-brown) !important;
 }
-/* ================= REMOVE BLUE FROM SORTED TABLE HEADERS ================= */
-
-th.sorted,
-th.sorted.asc,
-th.sorted.desc {
-    background-color: rgba(55, 65, 45, 0.95) !important;
-    color: var(--text-light) !important;
-    border-color: rgba(95, 115, 85, 1) !important;
-}
-
-/* Some themes also apply it to the whole column */
-td.sorted,
-td.sorted.asc,
-td.sorted.desc {
-    background-color: rgba(55, 65, 45, 0.85) !important;
-    color: var(--text-light) !important;
-}

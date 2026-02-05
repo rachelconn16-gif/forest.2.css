@@ -225,3 +225,26 @@ span.bg-info {
 .alert-info * {
     color: var(--text-light) !important;
 }
+/* ================= FORCE AGE SORT DROPDOWN GREEN ================= */
+
+/* The bar itself */
+#main .card select,
+#main select.form-control,
+#main .custom-select,
+#main select {
+    background-color: rgba(55, 65, 45, 1) !important;
+    color: rgba(215, 230, 200, 1) !important;
+    border: 2px solid rgba(95, 115, 85, 1) !important;
+}
+
+/* Dropdown arrow + focus */
+#main select:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Options inside dropdown */
+#main select option {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: rgba(215, 230, 200, 1) !important;
+}

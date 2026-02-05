@@ -1,270 +1,308 @@
-/* ================= GLOBAL COLOR PALETTE ================= */ 
-:root {
-    --text-main: rgba(185, 205, 170, 1);
-    --text-light: rgba(215, 230, 200, 1);
-    --text-dark: rgba(135, 155, 120, 1);
 
-    --bg-dark: rgba(30, 35, 25, 0.9);
-    --bg-mid: rgba(55, 65, 45, 0.9);
-    --bg-light: rgba(95, 105, 75, 0.5);
-
-    --accent-brown: rgba(110, 90, 60, 1);
+h1 {font-size: 40px;text-align: center;
+	color: rgba(230, 250, 255, 1);
+	}
+	
+	.breadcrumb::after /* æŽˆæƒ*/ 
+{
+    content:'CSS by 148046';
+    position:absolute;
+    right:35px;
+    font-weight: bold;
 }
 
-/* ================= BODY BACKGROUND + CURSOR ================= */
 body {
-    background-image: url("https://wallpaperaccess.com/full/2551018.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    cursor: url("https://www.rw-designer.com/cursor-view/148975.png"), auto;
-    color: var(--text-main);
+	background-image: url("https://th.bing.com/th/id/OIP.GQYKQJ1vNlh8r5P1UAjr-QHaEK?w=333&h=187&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3");
+	 background-position: top;
+    background-size:cover !important;
 }
 
-/* ================= TITLE + CREDIT ================= */
-h1 {
-    font-size: 40px;
-    text-align: center;
-    color: var(--text-light);
-    text-shadow: 0 0 8px rgba(40, 50, 30, 0.9);
+body, .table th, .nav-tabs .nav-link.active {
+    background:url("https://th.bing.com/th/id/OIP.A4Il9bBD1ipbUfHI4N_hagHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3")
+    center fixed !important;
+    background-size:cover !important;
+    color: rgba(200, 220, 240, 1);
+    border-radius: 15px 15px 0px 0px;
 }
 
-.breadcrumb::after {
-    content: "CSS by 148046";
-    position: absolute;
-    right: 35px;
-    font-weight: bold;
-    color: var(--accent-brown);
-    text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
-}
-
-/* ================= LINKS ================= */
+/* Home å·¦ä¾§ä¹¦ç­¾ç­‰é“¾æŽ¥é¢œè‰²*/ 
 a {
-    color: var(--text-main);
-    font-weight: bold;
+	color: rgba(190, 210, 220, 1);
+	font-weight: bold;
 }
 
 a:hover {
-    color: var(--text-dark);
+	color: rgba(150, 170, 180, 1);
 }
 
-/* ================= NAVBAR — SINGLE STRIP ================= */
-#header .navbar-main {
-    background-color: rgba(40, 45, 30, 0.85);
-    border: 2px solid rgba(20, 25, 15, 1);
-    border-radius: 25px;
-    padding: 6px 12px;
+/* å¯¼èˆªåº•è‰² DEN CROSSROAD */
+#header .navbar-main, #footer {
+	background-color: rgba(10, 10, 10, 0);
 }
 
-#header .navbar-main .nav-link,
-#header .navbar-main .nav-link .fa {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    color: var(--text-main);
+/* å¯¼èˆªé“¾æŽ¥é¢œè‰² DEN CROSSROAD */
+#header .navbar-main .nav-link, #header .navbar-main .nav-link .fa {
+	color: rgba(190, 210, 220, 1);
+	margin-right:5px;
+	background-color: rgba(40, 45, 50, 0.8);
+	border:solid 2px rgba(20, 25, 30, 1);
+	border-radius:20px;
 }
 
-#header .navbar-main .nav-link:hover,
-#header .navbar-main .nav-link:hover .fa {
-    color: var(--text-light);
-    text-shadow: 0 0 6px var(--text-main);
+#header .navbar-main .nav-link .fa /* Paw Icon, etc. of Den, etc. */ {
+  border:none;
+  background:transparent;
 }
 
-#header .navbar-main .nav-item {
-    margin: 0 8px;
+#header .navbar-main .nav-link:hover, #header .navbar-main .nav-link:hover .fa, #footer a:hover, #footer nav .nav-item .nav-link:hover {
+	color: rgba(150, 170, 180, 1);
 }
 
-/* ================= STATUS BAR ================= */
-.navbar-status {
-    background-color: var(--bg-mid) !important;
-    color: var(--text-main) !important;
-    border-radius: 20px;
+/* Welcome back */
+.navbar-status 
+{
+    background-color: rgba(35, 45, 55, 1) !important;
+    border-radius:20px;
+    color:  rgba(190, 210, 220, 1) !important;
+} .navbar-status a {
+    color: rgba(190, 210, 220, 1) !important;
+} .btn-group-vertical>.btn, .btn-group>.btn /* Username in that bar */ {
+    color: rgba(190, 210, 220, 1) !important;
 }
 
-.navbar-status a {
-    color: var(--text-main) !important;
+
+/* home, username, pack */
+#header .breadcrumb-nav {
+	background-color: rgba(90, 30, 20, 0);
 }
 
-/* ================= MAIN CONTENT ================= */
+.breadcrumb-item.active {
+	color: rgba(230, 250, 255, 1);
+}
+
+
+/* ä¸»æ¿ */
 #main {
-    background-color: var(--bg-dark);
-    border-radius: 0px 10px 0px 10px;
-    border: solid 2px rgba(0, 0, 0, 0.8);
+	background-color: rgba(10, 10, 10, 0.8);
+	border-radius:0px 10px 0px 10px;
+	border:solid 2px rgba(10, 10, 10, 1);
 }
 
-/* ================= TABLES ================= */
-.table {
-    background-color: var(--bg-mid);
-    border-radius: 20px;
+/* DEN/PROFILE æŒ‰é”® */
+
+.nav-tabs /* Section containing the Den and Profile buttons */ {
+}
+.nav-tabs .nav-link /* Individual Den and Profile buttons */ {
     border: none;
-    color: var(--text-main);
+    font-weight: bold;
 }
-
-.table th a {
-    color: var(--text-main);
-}
-
-.table th a:hover {
-    color: var(--text-light);
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-/* ================= CARDS ================= */
-.card,
-#sidebar .card {
-    background-color: var(--bg-mid);
-    border-radius: 20px;
+.nav-tabs .nav-link:hover /* Hover of inactive button */ {
     border: none;
+    font-weight: bold;
 }
-
-.bg-dark {
-    background-color: var(--bg-mid) !important;
-}
-
-.bg-light {
-    background-color: var(--bg-light) !important;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-
-/* ================= SIDEBAR ================= */
-#sidebar {
-    background-color: var(--bg-dark);
-    border-radius: 10px 0px 10px 0px;
-    border: solid 2px rgba(0, 0, 0, 0.8);
-}
-
-/* ================= PROGRESS BARS ================= */
-.progress {
-    background: rgba(0, 0, 0, 0.8) !important;
-}
-
-.bg-success,
-.bg-info,
-.bg-warning,
-.bg-danger,
-.bg-primary {
-    background-color: var(--accent-brown) !important;
-}
-
-/* ================= CHAT ================= */
-.s-chat-message:nth-child(odd) {
-    background: rgba(60, 70, 45, 1);
-}
-
-.s-chat-message:nth-child(even) {
-    background: rgba(80, 90, 60, 1);
-}
-
-#chatMessagePinned.s-chat-message__pinned {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-}
-
-/* ================= BUTTONS ================= */
-.btn-info,
-.btn-primary,
-.btn-success,
-.btn-warning,
-.btn-danger {
-    background-color: var(--accent-brown);
-    color: var(--text-light) !important;
-    border-radius: 20px;
+.nav-tabs .nav-link.active /* Link of the page being viewed */ {
     border: none;
     font-weight: bold;
 }
 
-.btn-info:hover,
-.btn-primary:hover,
-.btn-success:hover,
-.btn-warning:hover,
+/* pack dynasty,feed all play all,Expand Territory */
+#main .card {
+	background: rgba(35, 45, 55, 1);
+	border-radius:0px;
+}
+.card-header {
+	border: none;
+}
+
+/* ä¸»ç‹¼å¤´åƒèƒŒæ™¯ */ 
+.border-none .card 
+{
+    background-color:transparent !important;
+}
+
+/* ç¬¬äºŒå¤§ä¸»æ¿ */
+.table {
+  background-image: url(https://th.bing.com/th/id/OIP.A4Il9bBD1ipbUfHI4N_hagHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3)!important;
+  background-blend-mode:overlay;
+  background-color: rgba(55, 65, 75, 1);
+	border-radius: 20px;
+	border:none
+}
+
+/* Leader,Caveé“¾æŽ¥é¢œè‰² */
+.table th a {
+	color: rgba(190, 210, 220, 1);
+}
+
+.table th a:hover {
+	color: rgba(150, 170, 180, 1);
+}
+
+/* æ¬¡çº§æ ‡é¢˜é¢œè‰²ï¼Œå¬å›žç‹¼ */
+.table .subheader {
+	background-color: rgba(10, 10, 10, 0.4);
+	border:none;
+}
+
+/* ï¼Ÿ */
+.table .left {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+/* åŒè‰²æ¡ */
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+/* caveä¸‹æ–¹é€‰æ‹©åº•è‰²ç­‰ */
+.table td.bottom {
+	background-color: rgba(10, 10, 10, 1);
+}
+
+/* card veiwå°æ ‡é¢˜ç‹¼åå­—åº•è‰² */
+.bg-dark {
+background-color: rgba(35, 45, 55, 1) !important;
+}
+
+/* card veiwå¡ç‰‡åº•è‰² */
+.bg-light {
+background-color: rgba(145, 165, 175 ,0.4)!important;
+  border: none;
+	box-shadow:1px 1px 2px 2px rgba(0 ,0 ,0 ,0.4);
+}
+
+
+/* è¾¹åŒºå¤§åº•è‰² */
+#sidebar {
+	background-color: rgba(10, 10, 10, 0.8);
+	border-radius:10px 0px 10px 0px;
+	border:solid 2px rgba(10, 10, 10, 1);
+}
+
+#sidebar .multi-column {
+	padding-top: 15px;
+}
+
+/* è¾¹åŒºå¡ç‰‡åº•è‰² */
+#sidebar .card {
+  background-image: url(https://th.bing.com/th/id/OIP.A4Il9bBD1ipbUfHI4N_hagHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3)!important;
+  background-blend-mode:overlay;
+  background-color: rgba(35, 45, 55, 1);
+	border-radius: 20px;
+	border:none
+}
+
+/* çŠ¶æ€åº•è‰² */
+.progress {
+	background: rgba(10,10,10,1) !important;
+}
+
+/* èƒ½é‡ */
+.bg-warning, #main .bg-success  {
+	background-color: rgba(195, 205, 215, 1) !important;
+}
+
+
+#sidebar .bg-danger, .bg-primary {
+	background-color: rgba(130, 150, 160, 1) !important;
+}
+
+
+#sidebar .bg-info, #main .bg-danger {
+	background-color: rgba(85, 105, 120, 1) !important;
+}
+
+
+#sidebar .bg-success, #main .bg-info {
+	background-color: rgba(65, 75, 85, 1) !important;
+}
+
+#chatMessagePinned.s-chat-message__pinned {
+	background-color: rgba(10, 10, 10, 0.8);
+	color: rgba(230, 250, 255, 1);
+	padding: 5px;
+}
+
+/* èŠå¤©æ */
+.s-chat-sidebar #chatMessageList {
+	height: 370px;
+}
+
+.s-chat-message:nth-child(odd) {
+	background: rgba(65, 75, 85, 1);
+}
+
+.s-chat-message:nth-child(even) {
+	background: rgba(85, 105, 120, 1);
+}
+
+ input#btnChatSend.btn.btn-primary.btn-sm:hover{border-color: black !important;}
+/*0/150*/ 
+#txtChatContainer #lblCharacterCounter { color: rgba(230, 250, 255, 1);
+/* Code of Conduct*/
+} #txtChatContainer a { color: rgba(230, 250, 255, 1);}
+
+
+/* userlogä¸‹æ‹‰å¤„*/
+.dropdown-menu.show /* Dropdown menu for 'Profile, User Log, Log Out, etc.' */ {
+    background-color: rgba(10, 10, 10, 0.8);
+}.dropdown-item:hover {
+    background-color: rgba(10, 10, 10, 1);
+}
+.dropdown-divider {
+    border: none;
+}
+
+/* Feed/Play æŒ‰é’® */ 
+.btn-info 
+{
+    background: rgba(125, 135, 145, 1);
+    color: rgba(230, 250, 255, 1) !important;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+}.btn-info:hover {
+    background: rgba(125, 135, 145, 0.6);
+    color: rgba(230, 250, 255, 0.8) !important;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Update æŒ‰é’®*/
+.btn-primary, .btn-success {
+	background-color: rgba(125, 135, 145, 1);
+	border-radius: 15px;
+	border: none;
+	font-weight: bold;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-success:hover, .btn-success:focus {
+	background-color: rgba(125, 135, 145, 0.6) !important;
+	box-shadow: none !important;
+}
+
+/* ä¸æœ½æ§½æŒ‰é’®*/
+.btn-warning {
+	background-color: rgba(125, 135, 145, 1);
+	border-radius: 15px;
+	border: none;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+	background-color: rgba(125, 135, 145, 0.6) !important;
+	box-shadow: none !important;
+}
+
+/* -cssæŒ‰é’®*/
+.btn-danger {
+	background-color: rgba(125, 135, 145, 1);
+	border-radius: 15px;
+	border: none;
+}
+
 .btn-danger:hover {
-    background-color: rgba(110, 90, 60, 0.7) !important;
+	background-color: rgba(125, 135, 145, 0.6) !important;
+	box-shadow: none !important;
 }
-/* ================= FORCE GREEN INFO ELEMENTS ================= */
-
-/* Any blue info background anywhere */
-.bg-info,
-.alert-info,
-.card.bg-info,
-div.bg-info,
-span.bg-info {
-    background-color: rgba(55, 65, 45, 0.95) !important;
-    color: var(--text-light) !important;
-    border-color: rgba(95, 115, 85, 1) !important;
-}
-
-/* Territory / Immortal panels specifically */
-#main .card,
-#main .card-body {
-    background-color: rgba(55, 65, 45, 0.95) !important;
-    color: var(--text-light) !important;
-}
-
-/* Pack / wolf listing bars */
-#main .card-header,
-#main .bg-info.card-header {
-    background-color: rgba(40, 50, 30, 1) !important;
-    color: var(--text-light) !important;
-}
-
-/* Fix text inside info panels */
-.bg-info *,
-.alert-info * {
-    color: var(--text-light) !important;
-}
-/* ================= FORCE ALL HP / HEALTH BARS TO BROWN ================= */
-
-/* Generic progress bars */
-.progress-bar,
-.progress .progress-bar {
-    background-color: var(--accent-brown) !important;
-}
-
-/* Bootstrap variants often used for HP */
-.progress-bar-success,
-.bg-success,
-.text-success {
-    background-color: var(--accent-brown) !important;
-    color: var(--text-light) !important;
-}
-
-/* Common custom HP classes used on game sites */
-.hp,
-.hp-bar,
-.health,
-.health-bar,
-.bar-green,
-.hp-green {
-    background-color: var(--accent-brown) !important;
-    color: var(--text-light) !important;
-}
-
-/* Inline-style override (rare but some sites do this) */
-.progress-bar[style*="background"],
-div[style*="background-color:#28a745"],
-div[style*="background-color: rgb(40, 167, 69)"] {
-    background-color: var(--accent-brown) !important;
-}
-/* ================= REMOVE BLUE FROM SELECT DROPDOWNS ================= */
-
-select,
-select:focus,
-select option,
-select option:checked,
-select option:hover {
-    background-color: rgba(55, 65, 45, 0.95) !important;
-    color: var(--text-light) !important;
-    border: 1px solid rgba(95, 115, 85, 1) !important;
-    outline: none !important;
-}
-
-/* Some browsers apply their own highlight color */
-select option:checked {
-    background-color: rgba(40, 50, 30, 1) !important;
-    color: var(--text-light) !important;
-}
+                                               

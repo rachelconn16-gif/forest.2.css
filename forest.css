@@ -185,32 +185,3 @@ a:hover {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
-/* ================= FORUM TOP NOTIFICATION BANNER ================= */
-
-/* Forum notification bar */
-.forum-notification,
-.notification,
-.alert-info.forum,
-#forums .alert,
-#forums .alert-info {
-    background-color: rgba(55, 65, 45, 0.95) !important;
-    color: rgba(215, 235, 210, 1) !important;
-    border: 2px solid rgba(95, 115, 85, 1) !important;
-    border-radius: 15px;
-}
-
-/* Text inside the forum notification */
-.forum-notification a,
-.notification a,
-#forums .alert a {
-    color: rgba(185, 205, 170, 1) !important;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.forum-notification a:hover,
-.notification a:hover,
-#forums .alert a:hover {
-    color: rgba(215, 235, 210, 1) !important;
-    text-shadow: 0 0 5px rgba(110, 140, 95, 0.8);
-}

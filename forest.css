@@ -1,4 +1,4 @@
-/* ================= GLOBAL COLOR PALETTE ================= */
+/* ================= GLOBAL COLOR PALETTE ================= */ 
 :root {
     --text-main: rgba(185, 205, 170, 1);
     --text-light: rgba(215, 230, 200, 1);
@@ -185,13 +185,3 @@ a:hover {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
-/* ===== FORCE FULL BACKGROUND OVERRIDE ===== */
-html, body {
-    background-image: url("https://wallpaperaccess.com/full/2551018.jpg") !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-color: transparent !important;
-}
-

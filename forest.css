@@ -4,23 +4,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Geo&display=swap");
 
 /* =========================
-   GLOBAL SETTINGS
+   GLOBAL FONT
    ========================= */
 * {
     font-family: "Geo", serif !important;
 }
 
+/* =========================
+   PAGE BACKGROUND (RICH YELLOW)
+   ========================= */
 body, html {
-    background-image: url("https://wallpaperaccess.com/full/1523923.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(
+        180deg,
+        #FFD166 0%,
+        #FFB703 45%,
+        #E89B1F 100%
+    ) !important;
     background-attachment: fixed;
-    background-position: center;
     color: #2B1A0A !important;
-    cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym579.cur"), auto !important;
 }
 
-/* Remove Wolvden gray base */
+/* Remove Wolvden default gray */
 #container {
     background: transparent !important;
 }
@@ -29,28 +33,27 @@ body, html {
    HEADER
    ========================= */
 
-/* Logo bar (untouched color, safe) */
+/* Logo bar stays gold */
 #header .navbar-main {
     background-color: #FFC260 !important;
-    border-radius: 10px 10px 0 0;
     border-bottom: 4px solid #FFDDBB;
     position: relative;
     z-index: 10;
 }
 
-/* Status / blue bar → black */
+/* Status / info bar → BLACK */
+#header .navbar:not(.navbar-main),
 .navbar-status,
-.navbar-default,
-#header .navbar:not(.navbar-main) {
+.navbar-default {
     background-color: #000000 !important;
-    border: none;
+    border: none !important;
 }
 
 /* =========================
    MAIN CONTENT + SIDEBAR
    ========================= */
 
-/* All dark gray backdrops → yellow */
+/* All previously gray panels */
 #content,
 #content .container,
 #content .row,
@@ -58,83 +61,43 @@ body, html {
 #content .box,
 #content .panel,
 #sidebar .card {
-    background-color: #FFAE2D !important;
-    opacity: 0.4;
+    background-color: #FFB703 !important;
     border-radius: 10px;
     border: 2px solid #FFDDBB;
-}
-
-/* Restore text clarity */
-#content *,
-#sidebar .card * {
-    opacity: 1 !important;
 }
 
 /* =========================
-   FEATURE TILES (Pack Dynasty, Breeding, etc.)
+   FEATURE TILES
    ========================= */
 .feature,
 .feature .panel,
-.feature .card,
-.feature-tile,
-.feature-container {
-    background-color: #FFAE2D !important;
-    opacity: 0.4;
+.feature-tile {
+    background-color: #FFB703 !important;
     border-radius: 10px;
     border: 2px solid #FFDDBB;
-}
-
-/* Keep text readable */
-.feature *,
-.feature-tile * {
-    opacity: 1 !important;
 }
 
 /* =========================
    CAVES
    ========================= */
-
-/* Cave container uses main background image */
 .cave,
 .cave-container,
-.cave-content,
-.cave .panel {
-    background-image: url("https://wallpaperaccess.com/full/1523923.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
+.cave-content {
+    background-color: #FFB703 !important;
     border-radius: 12px;
     border: 2px solid #FFDDBB;
-}
-
-/* Inner cave panels stay yellow & translucent */
-.cave .card,
-.cave .box,
-.cave .wolf-card {
-    background-color: #FFAE2D !important;
-    opacity: 0.4;
-    border-radius: 8px;
-}
-
-/* Restore wolf card text */
-.cave .card *,
-.cave .box *,
-.cave .wolf-card * {
-    opacity: 1 !important;
 }
 
 /* =========================
    TABLES
    ========================= */
 table {
-    background-color: #FFDDBB !important;
-    opacity: 0.9;
+    background-color: #FFE6B0 !important;
     border-radius: 6px;
 }
 
 table th {
     background-color: #3A1F04 !important;
-    border-bottom: 3px dashed #362312;
     color: #F2E9E4 !important;
 }
 
@@ -153,5 +116,4 @@ a:visited {
 
 a:hover {
     color: #B35A00;
-    text-decoration: none;
 }

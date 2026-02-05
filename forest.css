@@ -185,20 +185,55 @@ a:hover {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
-/* ================= AGE DESCENDING OUTER BAR FIX ================= */
+/* ================= FORCE GREEN INFO ELEMENTS ================= */
 
-/* The outer strip/container */
-#main .card-header,
-#main .card-header.bg-info,
-#main .bg-info.card,
-#main .bg-info.card-header {
+/* Any blue info background anywhere */
+.bg-info,
+.alert-info,
+.card.bg-info,
+div.bg-info,
+span.bg-info {
     background-color: rgba(55, 65, 45, 0.95) !important;
-    border: 2px solid rgba(95, 115, 85, 1) !important;
-    color: rgba(215, 230, 200, 1) !important;
+    color: var(--text-light) !important;
+    border-color: rgba(95, 115, 85, 1) !important;
 }
 
-/* Text inside that bar */
-#main .card-header *,
-#main .bg-info.card-header * {
-    color: rgba(215, 230, 200, 1) !important;
+/* Territory / Immortal panels specifically */
+#main .card,
+#main .card-body {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+}
+
+/* Pack / wolf listing bars */
+#main .card-header,
+#main .bg-info.card-header {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: var(--text-light) !important;
+}
+
+/* Sorting bar (Age Descending) */
+#main select,
+#main .form-control {
+    background-color: rgba(55, 65, 45, 1) !important;
+    color: var(--text-light) !important;
+    border: 2px solid rgba(95, 115, 85, 1) !important;
+}
+
+/* Fix text inside info panels */
+.bg-info *,
+.alert-info * {
+    color: var(--text-light) !important;
+}
+/* ================= RESTORE HP BAR COLOR ================= */
+
+/* HP progress bar specifically */
+.progress-bar.bg-danger,
+.progress-bar[style*="background-color"] {
+    background-color: rgba(170, 60, 60, 1) !important;
+}
+
+/* HP container (optional, keeps contrast clean) */
+.progress {
+    background-color: rgba(20, 20, 20, 0.9) !important;
 }

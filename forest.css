@@ -1,4 +1,4 @@
-/* ================= GLOBAL COLOR PALETTE ================ */
+/* ================= GLOBAL COLOR PALETTE ================= */
 :root {
     --text-main: rgba(185, 205, 170, 1);
     --text-light: rgba(215, 230, 200, 1);
@@ -11,16 +11,18 @@
     --accent-brown: rgba(110, 90, 60, 1);
 }
 
-/* ================= BACKGROUND + CURSOR ================ */
+/* ================= BODY BACKGROUND + CURSOR ================= */
 body {
-    background: url("https://wallpaperaccess.com/full/2551018.jpg")
-        no-repeat center/cover fixed !important;
+    background-image: url("https://tse4.mm.bing.net/th/id/OIP.WA22kBn2M7CxxbOqk9_2PAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     cursor: url("https://www.rw-designer.com/cursor-view/15866.png"), auto;
     color: var(--text-main);
-    margin: 0;
 }
 
-/* ================= TITLE + CREDIT ================ */
+/* ================= TITLE + CREDIT ================= */
 h1 {
     font-size: 40px;
     text-align: center;
@@ -37,7 +39,7 @@ h1 {
     text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
 }
 
-/* ================= LINKS ================ */
+/* ================= LINKS ================= */
 a {
     color: var(--text-main);
     font-weight: bold;
@@ -47,7 +49,7 @@ a:hover {
     color: var(--text-dark);
 }
 
-/* ================= NAVIGATION BAR AS SINGLE STRIP ================ */
+/* ================= NAVBAR — SINGLE STRIP ================= */
 #header .navbar-main {
     background-color: rgba(40, 45, 30, 0.85);
     border: 2px solid rgba(20, 25, 15, 1);
@@ -74,12 +76,7 @@ a:hover {
     margin: 0 8px;
 }
 
-#footer nav .nav-link {
-    background: transparent !important;
-    border: none !important;
-}
-
-/* ================= STATUS BAR ================ */
+/* ================= STATUS BAR ================= */
 .navbar-status {
     background-color: var(--bg-mid) !important;
     color: var(--text-main) !important;
@@ -90,14 +87,14 @@ a:hover {
     color: var(--text-main) !important;
 }
 
-/* ================= MAIN CONTENT ================ */
+/* ================= MAIN CONTENT ================= */
 #main {
     background-color: var(--bg-dark);
     border-radius: 0px 10px 0px 10px;
     border: solid 2px rgba(0, 0, 0, 0.8);
 }
 
-/* ================= TABLES ================ */
+/* ================= TABLES ================= */
 .table {
     background-color: var(--bg-mid);
     border-radius: 20px;
@@ -117,7 +114,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-/* ================= CARDS ================ */
+/* ================= CARDS ================= */
 .card,
 #sidebar .card {
     background-color: var(--bg-mid);
@@ -134,14 +131,14 @@ a:hover {
     box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
-/* ================= SIDEBAR ================ */
+/* ================= SIDEBAR ================= */
 #sidebar {
     background-color: var(--bg-dark);
     border-radius: 10px 0px 10px 0px;
     border: solid 2px rgba(0, 0, 0, 0.8);
 }
 
-/* ================= PROGRESS BARS ================ */
+/* ================= PROGRESS BARS ================= */
 .progress {
     background: rgba(0, 0, 0, 0.8) !important;
 }
@@ -154,7 +151,7 @@ a:hover {
     background-color: var(--accent-brown) !important;
 }
 
-/* ================= CHAT ================ */
+/* ================= CHAT ================= */
 .s-chat-message:nth-child(odd) {
     background: rgba(60, 70, 45, 1);
 }
@@ -168,7 +165,7 @@ a:hover {
     color: var(--text-light);
 }
 
-/* ================= BUTTONS ================ */
+/* ================= BUTTONS ================= */
 .btn-info,
 .btn-primary,
 .btn-success,

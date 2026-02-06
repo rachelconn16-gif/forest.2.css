@@ -49,7 +49,7 @@ a:hover {
     color: var(--text-dark);
 }
 
-/* ================= NAVIGATION BAR — OG POSITION, SINGLE STRIP ================= */
+/* ================= NAVIGATION BAR — SINGLE STRIP ================= */
 
 /* Navbar container = the strip */
 #header .navbar-main {
@@ -170,7 +170,7 @@ a:hover {
     border: solid 2px rgba(0, 0, 0, 0.8);
 }
 
-/* ================= PROGRESS BARS — OG STYLE ================= */
+/* ================= PROGRESS BARS  ================= */
 .progress {
     background: rgba(0, 0, 0, 0.8) !important;
     border-radius: 10px;
@@ -303,7 +303,7 @@ span.bg-info {
     background-color: var(--accent-brown) !important;
 }
 
-/* Bootstrap variants often used for HP */
+/* Bootstrap variants HP */
 .progress-bar-success,
 .bg-success,
 .text-success {
@@ -311,7 +311,7 @@ span.bg-info {
     color: var(--text-light) !important;
 }
 
-/* Common custom HP classes used on game sites */
+/* Common custom HP classes */
 .hp,
 .hp-bar,
 .health,
@@ -322,7 +322,7 @@ span.bg-info {
     color: var(--text-light) !important;
 }
 
-/* Inline-style override (rare but some sites do this) */
+/* Inline-style override */
 .progress-bar[style*="background"],
 div[style*="background-color:#28a745"],
 div[style*="background-color: rgb(40, 167, 69)"] {

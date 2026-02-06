@@ -223,55 +223,30 @@ span.bg-info {
 .progress-bar,
 .progress .progress-bar {
     background-color: var(--accent-brown) !important;
-/* ================= HARD HEADER RESET ================= */
+/* ================= LOGO / NAVBAR OVERLAP FIX ================= */
 
-/* Reset Wolvden header positioning */
-#header,
-#header * {
-    position: static !important;
-    float: none !important;
-}
-
-/* Stack header elements vertically */
+/* Give header breathing room */
 #header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    padding-bottom: 15px;
 }
 
-/* Logo centered on its own line */
-#header .navbar-brand {
-    margin: 10px auto !important;
-    text-align: center !important;
-    z-index: 2;
-}
-
-/* Navbar sits UNDER logo */
+/* Push navbar BELOW the logo */
 #header .navbar-main {
+    margin-top: 70px !important; /* adjust if needed */
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    margin: 0 auto 10px auto !important;
-    width: fit-content;
-    z-index: 1;
 }
 
-/* Nav list centered */
+/* Center nav items */
 #header .navbar-main .navbar-nav {
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 auto !important;
 }
 
-/* Individual nav items */
-#header .navbar-main .nav-item {
-    display: inline-flex !important;
-    align-items: center;
-}
-
-/* Icon spacing */
+/* Prevent icons from hiding */
+#header .navbar-main .nav-link,
 #header .navbar-main .nav-link .fa {
-    margin-right: 6px;
+    position: relative;
+    z-index: 5;
 }

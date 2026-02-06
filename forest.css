@@ -49,31 +49,34 @@ a:hover {
     color: var(--text-dark);
 }
 
-/* ================= NAVBAR — SINGLE STRIP ================= */
+/* ================= NAVIGATION BAR — OG POSITION, SINGLE STRIP ================= */
+
+/* Navbar container = the strip */
 #header .navbar-main {
-    background-color: rgba(40, 45, 30, 0.85);
-    border: 2px solid rgba(20, 25, 15, 1);
+    background-color: rgba(40, 45, 50, 0.85);
+    border: 2px solid rgba(20, 25, 30, 1);
     border-radius: 25px;
-    padding: 6px 12px;
+    padding: 6px 14px;
 }
 
+/* Nav links = transparent, no boxes */
 #header .navbar-main .nav-link,
 #header .navbar-main .nav-link .fa {
+    color: rgba(190, 210, 220, 1);
     background: transparent !important;
     border: none !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    color: var(--text-main);
+    margin-right: 10px;
 }
 
+/* Icons only */
+#header .navbar-main .nav-link .fa {
+    margin-right: 6px;
+}
+
+/* Hover effect */
 #header .navbar-main .nav-link:hover,
 #header .navbar-main .nav-link:hover .fa {
-    color: var(--text-light);
-    text-shadow: 0 0 6px var(--text-main);
-}
-
-#header .navbar-main .nav-item {
-    margin: 0 8px;
+    color: rgba(150, 170, 180, 1);
 }
 
 /* ================= STATUS BAR ================= */
@@ -222,32 +225,4 @@ span.bg-info {
 /* Generic progress bars */
 .progress-bar,
 .progress .progress-bar {
-   /* ================= NAVIGATION BAR — OG POSITION, SINGLE STRIP ================= */
-
-/* Navbar container = the strip */
-#header .navbar-main {
-    background-color: rgba(40, 45, 50, 0.85);
-    border: 2px solid rgba(20, 25, 30, 1);
-    border-radius: 25px;
-    padding: 6px 14px;
-}
-
-/* Nav links = transparent, no boxes */
-#header .navbar-main .nav-link,
-#header .navbar-main .nav-link .fa {
-    color: rgba(190, 210, 220, 1);
-    background: transparent !important;
-    border: none !important;
-    margin-right: 10px;
-}
-
-/* Icons only */
-#header .navbar-main .nav-link .fa {
-    margin-right: 6px;
-}
-
-/* Hover effect */
-#header .navbar-main .nav-link:hover,
-#header .navbar-main .nav-link:hover .fa {
-    color: rgba(150, 170, 180, 1);
-}
+ 

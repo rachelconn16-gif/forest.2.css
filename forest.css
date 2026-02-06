@@ -223,8 +223,62 @@ span.bg-info {
 .progress-bar,
 .progress .progress-bar {
     background-color: var(--accent-brown) !important;
-}
-/* ================= INLINE STYLE OVERRIDE (LAST RESORT) ================= */
-#main [style*="background-color: rgb("] {
+/* ================= TABLE BOTTOM (CAVE EXPAND BAR) ================= */
+
+/* The blue bottom bar when viewing caves */
+#main .table td.bottom {
     background-color: rgba(55, 65, 45, 0.95) !important;
+    color: rgba(215, 230, 200, 1) !important;
+    border-top: 2px solid rgba(95, 115, 85, 1) !important;
+}
+
+/* Anything inside that bar */
+#main .table td.bottom * {
+    color: rgba(215, 230, 200, 1) !important;
+}
+/* ================= NAVBAR POSITION FIX ================= */
+
+/* Make header stack vertically */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Keep logo centered and above */
+#header .navbar-brand {
+    position: relative !important;
+    margin-bottom: 8px;
+    z-index: 2;
+}
+
+/* Navbar strip BELOW logo */
+#header .navbar-main {
+    position: relative !important;
+    width: auto;
+    margin: 0 auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Center nav list */
+#header .navbar-main .navbar-nav {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+}
+
+/* Ensure items don’t float or overlap */
+#header .navbar-main .nav-item {
+    float: none !important;
+    display: inline-flex !important;
+    align-items: center;
+}
+
+/* Icons spacing */
+#header .navbar-main .nav-link .fa {
+    margin-right: 6px;
 }

@@ -260,3 +260,68 @@ span.bg-info {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
+/* ================= FORCE GREEN INFO ELEMENTS ================= */
+
+/* Any blue info background anywhere */
+.bg-info,
+.alert-info,
+.card.bg-info,
+div.bg-info,
+span.bg-info {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+    border-color: rgba(95, 115, 85, 1) !important;
+}
+
+/* Territory / Immortal panels specifically */
+#main .card,
+#main .card-body {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+}
+
+/* Pack / wolf listing bars */
+#main .card-header,
+#main .bg-info.card-header {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: var(--text-light) !important;
+}
+
+/* Fix text inside info panels */
+.bg-info *,
+.alert-info * {
+    color: var(--text-light) !important;
+}
+/* ================= FORCE ALL HP / HEALTH BARS TO BROWN ================= */
+
+/* Generic progress bars */
+.progress-bar,
+.progress .progress-bar {
+    background-color: var(--accent-brown) !important;
+}
+
+/* Bootstrap variants often used for HP */
+.progress-bar-success,
+.bg-success,
+.text-success {
+    background-color: var(--accent-brown) !important;
+    color: var(--text-light) !important;
+}
+
+/* Common custom HP classes used on game sites */
+.hp,
+.hp-bar,
+.health,
+.health-bar,
+.bar-green,
+.hp-green {
+    background-color: var(--accent-brown) !important;
+    color: var(--text-light) !important;
+}
+
+/* Inline-style override (rare but some sites do this) */
+.progress-bar[style*="background"],
+div[style*="background-color:#28a745"],
+div[style*="background-color: rgb(40, 167, 69)"] {
+    background-color: var(--accent-brown) !important;
+}

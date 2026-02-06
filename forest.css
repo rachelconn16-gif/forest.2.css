@@ -53,15 +53,16 @@ a:hover {
 
 /* Navbar container = the strip */
 #header .navbar-main {
-    background-color: rgba(40, 45, 50, 0.85);
-    border: 2px solid rgba(20, 25, 30, 1);
+    background-color: var(--bg-dark);
+    border: 2px solid var(--accent-brown);
     border-radius: 25px;
+    padding: 6px 14px;
 }
 
 /* Nav links = transparent, no boxes */
 #header .navbar-main .nav-link,
 #header .navbar-main .nav-link .fa {
-    color: rgba(190, 210, 220, 1);
+    color: var(--text-main);
     background: transparent !important;
     border: none !important;
     margin-right: 10px;
@@ -75,8 +76,9 @@ a:hover {
 /* Hover effect */
 #header .navbar-main .nav-link:hover,
 #header .navbar-main .nav-link:hover .fa {
-    color: rgba(150, 170, 180, 1);
+    color: var(--text-light);
 }
+
 
 /* ================= STATUS BAR ================= */
 .navbar-status {

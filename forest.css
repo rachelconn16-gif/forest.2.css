@@ -1,38 +1,320 @@
-/* 1. Global Background */
+/* ================= GLOBAL COLOR PALETTE ================= */ 
+:root {
+    --text-main: rgba(185, 205, 170, 1);
+    --text-light: rgba(215, 230, 200, 1);
+    --text-dark: rgba(135, 155, 120, 1);
+
+    --bg-dark: rgba(30, 35, 25, 0.9);
+    --bg-mid: rgba(55, 65, 45, 0.9);
+    --bg-light: rgba(95, 105, 75, 0.5);
+
+    --accent-brown: rgba(110, 90, 60, 1);
+}
+
+/* ================= BODY BACKGROUND + CURSOR ================= */
 body {
-    background-image: url('https://images.unsplash.com');
-    background-attachment: fixed;
+    background-image: url("https://wallpaperaccess.com/full/2551018.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    background-position: center;
-    color: #2D3E33; /* Dark green text for readability */
+    background-attachment: fixed;
+    cursor: url("https://www.rw-designer.com/cursor-view/148975.png"), auto;
+    color: var(--text-main);
 }
 
-/* 2. Main Content Cards */
-.card {
-    background-color: rgba(209, 215, 211, 0.9) !important; /* Soft Mist Gray */
-    border: 2px solid #2D3E33; /* Forest Green Border */
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+/* ================= TITLE + CREDIT ================= */
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--text-light);
+    text-shadow: 0 0 8px rgba(40, 50, 30, 0.9);
 }
 
-/* 3. Navigation Bar */
-.navbar {
-    background-color: #2D3E33 !important; /* Deep Evergreen */
-    border-bottom: 3px solid #5C4D42; /* Bark Brown Accent */
+.breadcrumb::after {
+    content: "CSS by 148046";
+    position: absolute;
+    right: 35px;
+    font-weight: bold;
+    color: var(--accent-brown);
+    text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
 }
 
-/* 4. Progress Bars & Buttons */
-.progress-bar {
-    background-color: #5C4D42 !important; /* Brown energy/HP bars */
+/* ================= LINKS ================= */
+a {
+    color: var(--text-main);
+    font-weight: bold;
 }
 
-.btn-primary {
-    background-color: #2D3E33 !important;
-    border-color: #5C4D42 !important;
+a:hover {
+    color: var(--text-dark);
 }
 
-/* 5. Tables & Lists */
+/* ================= NAVBAR — SINGLE STRIP ================= */
+#header .navbar-main {
+    background-color: rgba(40, 45, 30, 0.85);
+    border: 2px solid rgba(20, 25, 15, 1);
+    border-radius: 25px;
+    padding: 6px 12px;
+}
+
+#header .navbar-main .nav-link,
+#header .navbar-main .nav-link .fa {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    color: var(--text-main);
+}
+
+#header .navbar-main .nav-link:hover,
+#header .navbar-main .nav-link:hover .fa {
+    color: var(--text-light);
+    text-shadow: 0 0 6px var(--text-main);
+}
+
+#header .navbar-main .nav-item {
+    margin: 0 8px;
+}
+
+/* ================= STATUS BAR ================= */
+.navbar-status {
+    background-color: var(--bg-mid) !important;
+    color: var(--text-main) !important;
+    border-radius: 20px;
+}
+
+.navbar-status a {
+    color: var(--text-main) !important;
+}
+
+/* ================= MAIN CONTENT ================= */
+#main {
+    background-color: var(--bg-dark);
+    border-radius: 0px 10px 0px 10px;
+    border: solid 2px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= TABLES ================= */
 .table {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
+    background-color: var(--bg-mid);
+    border-radius: 20px;
+    border: none;
+    color: var(--text-main);
+}
+
+.table th a {
+    color: var(--text-main);
+}
+
+.table th a:hover {
+    color: var(--text-light);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* ================= CARDS ================= */
+.card,
+#sidebar .card {
+    background-color: var(--bg-mid);
+    border-radius: 20px;
+    border: none;
+}
+
+.bg-dark {
+    background-color: var(--bg-mid) !important;
+}
+
+.bg-light {
+    background-color: var(--bg-light) !important;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ================= SIDEBAR ================= */
+#sidebar {
+    background-color: var(--bg-dark);
+    border-radius: 10px 0px 10px 0px;
+    border: solid 2px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= PROGRESS BARS ================= */
+.progress {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger,
+.bg-primary {
+    background-color: var(--accent-brown) !important;
+}
+
+/* ================= CHAT ================= */
+.s-chat-message:nth-child(odd) {
+    background: rgba(60, 70, 45, 1);
+}
+
+.s-chat-message:nth-child(even) {
+    background: rgba(80, 90, 60, 1);
+}
+
+#chatMessagePinned.s-chat-message__pinned {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* ================= BUTTONS ================= */
+.btn-info,
+.btn-primary,
+.btn-success,
+.btn-warning,
+.btn-danger {
+    background-color: var(--accent-brown);
+    color: var(--text-light) !important;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-info:hover,
+.btn-primary:hover,
+.btn-success:hover,
+.btn-warning:hover,
+.btn-danger:hover {
+    background-color: rgba(110, 90, 60, 0.7) !important;
+}
+/* ================= FORCE GREEN INFO ELEMENTS ================= */
+
+/* Any blue info background anywhere */
+.bg-info,
+.alert-info,
+.card.bg-info,
+div.bg-info,
+span.bg-info {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+    border-color: rgba(95, 115, 85, 1) !important;
+}
+
+/* Territory / Immortal panels specifically */
+#main .card,
+#main .card-body {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+}
+
+/* Pack / wolf listing bars */
+#main .card-header,
+#main .bg-info.card-header {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: var(--text-light) !important;
+}
+
+/* Fix text inside info panels */
+.bg-info *,
+.alert-info * {
+    color: var(--text-light) !important;
+}
+/* ================= FORCE ALL HP / HEALTH BARS TO BROWN ================= */
+
+/* Generic progress bars */
+.progress-bar,
+.progress .progress-bar {
+    background-color: var(--accent-brown) !important;
+}
+/* ================= CENTER NAV BAR UNDER LOGO ================= */
+
+/* Make navbar a flex container and center contents */
+#header .navbar-main {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+}
+
+/* Remove left offset caused by logo spacing */
+#header .navbar-main .navbar-nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Ensure each nav item stays inline and centered */
+#header .navbar-main .nav-item {
+    float: none !important;
+    display: inline-flex !important;
+}
+
+/* Stop logo from pushing nav sideways */
+#header .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Mobile / small width safety */
+@media (max-width: 768px) {
+    #header .navbar-brand {
+        position: relative;
+        transform: none;
+        left: auto;
+    }
+}
+/* ================= CAVE EXPAND / COLLAPSE BAR ================= */
+
+/* The clickable cave header bar */
+#main .card-header,
+#main .card-header.bg-info,
+#main .card-header button,
+#main .card-header .btn,
+#main .card-header .btn-info {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: rgba(215, 230, 200, 1) !important;
+    border: none !important;
+}
+
+/* Hover / active state */
+#main .card-header:hover,
+#main .card-header .btn:hover {
+    background-color: rgba(40, 50, 30, 1) !important;
+}
+
+/* Text & icons inside */
+#main .card-header *,
+#main .card-header .btn * {
+    color: rgba(215, 230, 200, 1) !important;
+}
+
+/* Remove leftover Bootstrap gradients */
+#main .card-header,
+#main .card-header::before,
+#main .card-header::after {
+    background-image: none !important;
+}
+
+
+/* Bootstrap variants often used for HP */
+.progress-bar-success,
+.bg-success,
+.text-success {
+    background-color: var(--accent-brown) !important;
+    color: var(--text-light) !important;
+}
+
+/* Common custom HP classes used on game sites */
+.hp,
+.hp-bar,
+.health,
+.health-bar,
+.bar-green,
+.hp-green {
+    background-color: var(--accent-brown) !important;
+    color: var(--text-light) !important;
+}
+
+/* Inline-style override (rare but some sites do this) */
+.progress-bar[style*="background"],
+div[style*="background-color:#28a745"],
+div[style*="background-color: rgb(40, 167, 69)"] {
+    background-color: var(--accent-brown) !important;
 }

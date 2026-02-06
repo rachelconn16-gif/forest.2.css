@@ -222,31 +222,37 @@ span.bg-info {
 /* Generic progress bars */
 .progress-bar,
 .progress .progress-bar {
-    background-color: var(--accent-brown) !important;
-/* ================= LOGO / NAVBAR OVERLAP FIX ================= */
+    /* ================= RESTORE ORIGINAL HEADER LAYOUT ================= */
 
-/* Give header breathing room */
-#header {
-    padding-bottom: 15px;
+/* Reset header positioning to Wolvden defaults */
+#header,
+#header * {
+    position: initial !important;
+    float: initial !important;
+    transform: none !important;
 }
 
-/* Push navbar BELOW the logo */
+/* Navbar back to original flow */
 #header .navbar-main {
-    margin-top: 70px !important; /* adjust if needed */
-    display: flex !important;
-    justify-content: center !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
 }
 
-/* Center nav items */
+/* Restore original nav list behavior */
 #header .navbar-main .navbar-nav {
-    display: flex !important;
-    justify-content: center !important;
-    margin: 0 auto !important;
+    display: block !important;
+    margin-left: auto !important;
 }
 
-/* Prevent icons from hiding */
-#header .navbar-main .nav-link,
-#header .navbar-main .nav-link .fa {
-    position: relative;
-    z-index: 5;
+/* Nav items back to original inline layout */
+#header .navbar-main .nav-item {
+    display: inline-block !important;
+}
+
+/* Logo back to OG placement */
+#header .navbar-brand {
+    position: relative !important;
+    margin: 0 !important;
 }

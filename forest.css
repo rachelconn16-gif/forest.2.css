@@ -1,7 +1,11 @@
-/* =======================================================
-   GLOBAL PALETTE
-======================================================= */
+/* ================= FONT ================= */
 
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+    font-family: "MedievalSharp", cursive;
+}
+/* ================= GLOBAL COLOR PALETTE ================= */
 :root {
     --text-main: rgba(185, 205, 170, 1);
     --text-light: rgba(215, 230, 200, 1);
@@ -14,63 +18,75 @@
     --accent-brown: rgba(110, 90, 60, 1);
 }
 
-/* =======================================================
-   GENERAL
-======================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-
+/* ================= BODY BACKGROUND + CURSOR ================= */
 body {
-    background: url("https://wallpaperaccess.com/full/2551018.jpg") center fixed no-repeat;
+    background-image: url("https://wallpaperaccess.com/full/2551018.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    font-family: "MedievalSharp", cursive;
+    background-attachment: fixed;
+    cursor: url("https://www.rw-designer.com/cursor-view/148975.png"), auto;
     color: var(--text-main);
 }
-/* Links */
+
+/* ================= TITLE + CREDIT ================= */
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--text-light);
+    text-shadow: 0 0 8px rgba(40, 50, 30, 0.9);
+}
+
+.breadcrumb::after {
+    content: "CSS by 148046";
+    position: absolute;
+    right: 35px;
+    font-weight: bold;
+    color: var(--accent-brown);
+    text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
+}
+
+/* ================= LINKS ================= */
 a {
     color: var(--text-main);
+    font-weight: bold;
 }
+
 a:hover {
-    color: var(--text-light);
+    color: var(--text-dark);
 }
+/* ================= NAVIGATION BAR  ================= */
 
-/* Alerts */
-.alert {
-    background-color: var(--bg-mid);
-    color: var(--text-light) !important;
-    border: none;
-    border-radius: 10px;
-}
-.alert a {
-    color: var(--text-light) !important;
-}
-
-/* =======================================================
-   NAVBAR
-======================================================= */
-
+/* Navbar container = the strip */
 #header .navbar-main {
-    background-color: var(--bg-mid);
+    background-color: rgba(55, 65, 45, 0.95); /* same as bg-mid / info panels */
     border: 2px solid rgba(0, 0, 0, 0.8);
     border-radius: 25px;
 }
 
-.navbar-main .nav-link,
-.navbar-main .nav-link .fa {
-    color: var(--text-main) !important;
+/* Nav links = transparent, no boxes */
+#header .navbar-main .nav-link,
+#header .navbar-main .nav-link .fa {
+    color: var(--text-main);
     background: transparent !important;
     border: none !important;
-    font-size: 20px;
+    margin-right: 10px;
 }
 
-.navbar-main .nav-link:hover,
-.navbar-main .nav-link:hover .fa {
-    color: var(--text-light) !important;
+/* Icons only */
+#header .navbar-main .nav-link .fa {
+    margin-right: 6px;
 }
 
-/* Status bar */
-#header .navbar-status {
-    background-color: var(--bg-light) !important;
+/* Hover effect — same green highlight used everywhere else */
+#header .navbar-main .nav-link:hover,
+#header .navbar-main .nav-link:hover .fa {
+    color: var(--text-light);
+}
+/* ================= STATUS BAR ================= */
+.navbar-status {
+    background-color: var(--bg-mid) !important;
+    border-radius: 20px;
     color: var(--text-main) !important;
 }
 
@@ -78,149 +94,161 @@ a:hover {
     color: var(--text-main) !important;
 }
 
-/* Dropdowns */
-.dropdown-menu {
-    background-color: var(--bg-dark);
-    border-radius: 12px;
-}
-
-.dropdown-item {
+.btn-group-vertical > .btn,
+.btn-group > .btn {
     color: var(--text-main) !important;
 }
 
-.dropdown-item:hover {
-    background-color: var(--bg-mid) !important;
-}
-
-/* =======================================================
-   BREADCRUMB
-======================================================= */
-
-#header .breadcrumb-nav,
-nav.breadcrumb-nav {
-    background-color: rgba(40, 50, 30, 0.95) !important;
-    color: var(--text-main) !important;
-    border-bottom: none !important;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    color: var(--text-dark);
-}
-
-.breadcrumb-item.active {
-    color: var(--text-light);
-}
-
-.breadcrumb::after {
-    content: "CSS by 148046";
-    position: absolute;
-    right: 35px;
-    color: var(--accent-brown);
-}
-
-/* =======================================================
-   SIDEBAR
-======================================================= */
-
-#sidebar {
-    background-color: var(--bg-dark);
-    border-radius: 10px 0 10px 0;
-}
-
-#sidebar .card {
-    background-color: var(--bg-mid);
-    border-radius: 10px;
-    border: none;
-}
-
-#sidebar h3,
-#sidebar h4 {
-    color: var(--text-light);
-}
-
-/* =======================================================
-   CHAT
-======================================================= */
-
-.s-chat-message:nth-child(odd) {
-    background-color: rgba(60, 70, 45, 1);
-}
-
-.s-chat-message:nth-child(even) {
-    background-color: rgba(80, 90, 60, 1);
-}
-
-.s-chat-message_timestamp {
-    color: var(--text-dark);
-}
-
-/* =======================================================
-   MAIN CONTENT
-======================================================= */
-
+/* ================= MAIN CONTENT ================= */
 #main {
     background-color: var(--bg-dark);
-    border-radius: 10px;
+    border-radius: 0px 10px 0px 10px;
+    border: solid 2px rgba(0, 0, 0, 0.8);
 }
 
-h1 {
-    color: var(--text-light);
-    text-align: center;
-    font-size: 45px;
-}
-
-/* Tabs */
-.nav-tabs {
-    justify-content: center;
-    border: none;
-}
-
+/* ================= TABS (DEN / PROFILE) ================= */
 .nav-tabs .nav-link {
-    background-color: var(--bg-light);
+    border: none;
+    font-weight: bold;
     color: var(--text-main);
-    border-radius: 10px;
 }
 
 .nav-tabs .nav-link.active {
-    background-color: var(--bg-mid);
+    background-color: rgba(55, 65, 45, 0.95) !important;
     color: var(--text-light);
+    border-radius: 15px 15px 0px 0px;
 }
 
-/* =======================================================
-   TABLES
-======================================================= */
-
+/* ================= TABLES ================= */
 .table {
     background-color: var(--bg-mid);
-    border-radius: 10px;
+    border-radius: 20px;
+    border: none;
     color: var(--text-main);
 }
 
-.table th {
-    background-color: rgba(40, 50, 30, 1);
+.table th a {
+    color: var(--text-main);
+}
+
+.table th a:hover {
     color: var(--text-light);
 }
 
-.table tr:nth-of-type(odd) {
+.table .subheader,
+.table .left,
+.table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-/* =======================================================
-   PROGRESS BARS
-======================================================= */
+.table td.bottom {
+    background-color: rgba(0, 0, 0, 0.85);
+}
 
+/* ================= CARDS ================= */
+.card,
+#sidebar .card {
+    background-color: var(--bg-mid);
+    border-radius: 20px;
+    border: none;
+}
+
+.card-header {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: var(--text-light);
+    border: none;
+}
+
+.bg-dark {
+    background-color: var(--bg-mid) !important;
+}
+
+.bg-light {
+    background-color: var(--bg-light) !important;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ================= SIDEBAR ================= */
+#sidebar {
+    background-color: var(--bg-dark);
+    border-radius: 10px 0px 10px 0px;
+    border: solid 2px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= PROGRESS BARS  ================= */
 .progress {
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-radius: 10px;
 }
 
-.progress-bar {
-    background-color: var(--accent-brown) !important;
+/* Energy */
+.bg-warning {
+    background-color: rgba(170, 185, 150, 1) !important;
 }
 
-/* =======================================================
-   BUTTONS
-======================================================= */
+/* Hunger */
+.bg-primary {
+    background-color: rgba(125, 145, 120, 1) !important;
+}
 
+/* Mood */
+.bg-info {
+    background-color: rgba(95, 120, 95, 1) !important;
+}
+
+/* HP */
+.bg-danger {
+    background-color: rgba(150, 90, 90, 1) !important;
+}
+
+/* EXP / misc */
+.bg-success {
+    background-color: rgba(110, 135, 100, 1) !important;
+}
+
+/* ================= FORUM / INFO PANELS ================= */
+.alert-info,
+.card.bg-info,
+div.bg-info,
+span.bg-info {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+    border-color: rgba(95, 115, 85, 1) !important;
+}
+
+.bg-info *,
+.alert-info * {
+    color: var(--text-light) !important;
+}
+
+/* ================= CHAT ================= */
+.s-chat-message:nth-child(odd) {
+    background: rgba(60, 70, 45, 1);
+}
+
+.s-chat-message:nth-child(even) {
+    background: rgba(80, 90, 60, 1);
+}
+
+#chatMessagePinned.s-chat-message__pinned {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* ================= DROPDOWNS ================= */
+.dropdown-menu.show {
+    background-color: rgba(20, 25, 15, 0.95);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(40, 50, 30, 1);
+}
+
+.dropdown-divider {
+    border: none;
+}
+
+/* ================= BUTTONS ================= */
 .btn-info,
 .btn-primary,
 .btn-success,
@@ -228,8 +256,9 @@ h1 {
 .btn-danger {
     background-color: var(--accent-brown);
     color: var(--text-light) !important;
-    border: none;
     border-radius: 20px;
+    border: none;
+    font-weight: bold;
 }
 
 .btn-info:hover,
@@ -239,29 +268,93 @@ h1 {
 .btn-danger:hover {
     background-color: rgba(110, 90, 60, 0.7) !important;
 }
+/* ================= FORCE GREEN INFO ELEMENTS ================= */
 
-/* =======================================================
-   FOOTER
-======================================================= */
-
-#footer {
-    background-color: var(--bg-mid) !important;
-    color: var(--text-main);
-    border-radius: 10px 10px 0 0;
+/* Any blue info background anywhere */
+.bg-info,
+.alert-info,
+.card.bg-info,
+div.bg-info,
+span.bg-info {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
+    border-color: rgba(95, 115, 85, 1) !important;
 }
 
-#footer a {
-    color: var(--text-main);
+/* Territory / Immortal panels specifically */
+#main .card,
+#main .card-body {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-light) !important;
 }
 
-#footer a:hover {
-    color: var(--text-light);
+/* Pack / wolf listing bars */
+#main .card-header,
+#main .bg-info.card-header {
+    background-color: rgba(40, 50, 30, 1) !important;
+    color: var(--text-light) !important;
 }
 
-/* =======================================================
-   CURSOR
-======================================================= */
+/* Fix text inside info panels */
+.bg-info *,
+.alert-info * {
+    color: var(--text-light) !important;
+}
+/* ================= FORCE ALL HP / HEALTH BARS TO BROWN ================= */
 
-* {
-    cursor: url("https://www.rw-designer.com/cursor-view/148975.png"), auto !important;
+/* Generic progress bars */
+.progress-bar,
+.progress .progress-bar {
+    background-color: var(--accent-brown) !important;
+}
+
+/* Bootstrap variants HP */
+.progress-bar-success,
+.bg-success,
+.text-success {
+    background-color: var(--accent-brown) !important;
+    color: var(--text-light) !important;
+}
+
+/* Common custom HP classes */
+.hp,
+.hp-bar,
+.health,
+.health-bar,
+.bar-green,
+.hp-green {
+    background-color: var(--accent-brown) !important;
+    color: var(--text-light) !important;
+}
+
+/* Inline-style override */
+.progress-bar[style*="background"],
+div[style*="background-color:#28a745"],
+div[style*="background-color: rgb(40, 167, 69)"] {
+    background-color: var(--accent-brown) !important;
+}
+
+/* ================= DEN / PROFILE TABS ================= */
+
+.nav-tabs {
+    justify-content: center;
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    background-color: rgba(95, 105, 75, 0.5); /* forest light */
+    color: rgba(185, 205, 170, 1);
+    border: none;
+    border-radius: 10px;
+    font-family: "MedievalSharp", cursive;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: rgba(55, 65, 45, 0.9);
+    color: rgba(215, 230, 200, 1);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: rgba(55, 65, 45, 0.95);
+    color: rgba(215, 230, 200, 1);
 }

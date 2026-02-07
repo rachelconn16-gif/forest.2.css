@@ -127,6 +127,14 @@ a:hover {
     color: var(--text-light);
     border-radius: 15px 15px 0px 0px;
 }
+/* ================= CENTER USER / DEN NAME ================= */
+
+#main h1,
+#main .page-title {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* ================= TABLES ================= */
 .table {

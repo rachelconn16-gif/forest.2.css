@@ -319,3 +319,9 @@ span.bg-info {
     background-color: var(--accent-brown) !important;
     color: var(--text-light) !important;
 }
+/* Inline-style override */
+.progress-bar[style*="background"],
+div[style*="background-color:#28a745"],
+div[style*="background-color: rgb(40, 167, 69)"] {
+    background-color: var(--accent-brown) !important;
+}

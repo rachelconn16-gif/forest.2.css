@@ -48,17 +48,16 @@ a {
 a:hover {
     color: var(--text-dark);
 }
-
-/* ================= NAVIGATION BAR — MATCH THEME ================= */
+/* ================= NAVIGATION BAR  ================= */
 
 /* Navbar container = the strip */
 #header .navbar-main {
-    background-color: var(--bg-mid); /* match mid background color */
-    border: 2px solid rgba(0, 0, 0, 0.8); /* darker border to match main container */
+    background-color: rgba(55, 65, 45, 0.95); /* same as bg-mid / info panels */
+    border: 2px solid rgba(0, 0, 0, 0.8);
     border-radius: 25px;
 }
 
-/* Nav links = transparent, no boxes, use theme colors */
+/* Nav links = transparent, no boxes */
 #header .navbar-main .nav-link,
 #header .navbar-main .nav-link .fa {
     color: var(--text-main);
@@ -72,22 +71,11 @@ a:hover {
     margin-right: 6px;
 }
 
-/* Hover effect = lighter theme tone */
+/* Hover effect — same green highlight used everywhere else */
 #header .navbar-main .nav-link:hover,
 #header .navbar-main .nav-link:hover .fa {
     color: var(--text-light);
-    text-shadow: 0 0 4px rgba(40, 50, 30, 0.7);
 }
-
-/* Active link styling */
-#header .navbar-main .nav-link.active,
-#header .navbar-main .nav-link.active .fa {
-    color: var(--text-light);
-    background-color: rgba(55, 65, 45, 0.9);
-    border-radius: 15px;
-}
-
-
 /* ================= STATUS BAR ================= */
 .navbar-status {
     background-color: var(--bg-mid) !important;

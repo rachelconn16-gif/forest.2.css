@@ -38,6 +38,31 @@ h1 {
     color: var(--accent-brown);
     text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
 }
+/* ########## BREADCRUMB BAR ########## */
+/* Breadcrumb bar displaying "Home / Username / Pack" */
+
+#header .breadcrumb-nav,
+nav.breadcrumb-nav {
+    background-color: rgba(55, 65, 45, 0.95) !important;
+    color: var(--text-main) !important;
+    border-bottom: none !important;
+}
+
+.breadcrumb-item + .breadcrumb-item:before {
+    color: var(--text-dark);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-light);
+}
+
+.breadcrumb-nav a {
+    color: var(--text-main);
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--text-light);
+}
 
 /* ================= LINKS ================= */
 a {
@@ -324,4 +349,27 @@ span.bg-info {
 div[style*="background-color:#28a745"],
 div[style*="background-color: rgb(40, 167, 69)"] {
     background-color: var(--accent-brown) !important;
+}
+/* ## ------------------------------------------------------- FOOTER ------------------------------------------------------- ## */
+
+#footer {
+    background-color: var(--bg-mid) !important;
+    color: var(--text-main);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#footer a {
+    color: var(--text-main);
+}
+
+#footer a:hover {
+    color: var(--text-light);
+}
+
+#footer nav .nav-item .nav-link {
+    color: var(--text-main);
+}
+
+#footer nav .nav-item .nav-link:hover {
+    color: var(--text-light);
 }

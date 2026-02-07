@@ -130,16 +130,16 @@ a:hover {
 
 /* ================= CENTER USER / DEN NAME ================= */
 
-.h-1,
+#main h1 {
+    text-align: center !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .mb-1 {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-}
-.h-1 {
-    display: flex !important;
-    justify-content: center !important;
-    text-align: center !important;
 }
 
 /* ================= TABLES ================= */

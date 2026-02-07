@@ -32,20 +32,30 @@ body {
 }
 
 /* ================= TITLE + CREDIT ================= */
-h1 {
-    font-size: 40px;
-    text-align: center;
+/* =======================================================
+   BREADCRUMB
+======================================================= */
+
+#header .breadcrumb-nav,
+nav.breadcrumb-nav {
+    background-color: rgba(40, 50, 30, 0.95) !important;
+    color: var(--text-main) !important;
+    border-bottom: none !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--text-dark);
+}
+
+.breadcrumb-item.active {
     color: var(--text-light);
-    text-shadow: 0 0 8px rgba(40, 50, 30, 0.9);
 }
 
 .breadcrumb::after {
     content: "CSS by 148046";
     position: absolute;
     right: 35px;
-    font-weight: bold;
     color: var(--accent-brown);
-    text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
 }
 
 /* ================= LINKS ================= */
@@ -359,4 +369,21 @@ div[style*="background-color: rgb(40, 167, 69)"] {
 .nav-tabs .nav-link.active {
     background-color: rgba(55, 65, 45, 0.95);
     color: rgba(215, 230, 200, 1);
+}
+/* =======================================================
+   FOOTER
+======================================================= */
+
+#footer {
+    background-color: var(--bg-mid) !important;
+    color: var(--text-main);
+    border-radius: 10px 10px 0 0;
+}
+
+#footer a {
+    color: var(--text-main);
+}
+
+#footer a:hover {
+    color: var(--text-light);
 }

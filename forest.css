@@ -38,12 +38,11 @@ h1 {
     color: var(--accent-brown);
     text-shadow: 0 0 6px rgba(40, 30, 15, 0.9);
 }
-/* ########## BREADCRUMB BAR ########## */
-/* Breadcrumb bar displaying "Home / Username / Pack" */
+/* ########## BREADCRUMB BAR — DARKER GREEN ########## */
 
 #header .breadcrumb-nav,
 nav.breadcrumb-nav {
-    background-color: rgba(55, 65, 45, 0.95) !important;
+    background-color: rgba(40, 50, 30, 0.95) !important; /* darker forest green */
     color: var(--text-main) !important;
     border-bottom: none !important;
 }

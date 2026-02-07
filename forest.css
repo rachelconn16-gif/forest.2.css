@@ -326,16 +326,18 @@ div[style*="background-color:#28a745"],
 div[style*="background-color: rgb(40, 167, 69)"] {
     background-color: var(--accent-brown) !important;
 }
-/* ================= CENTER DEN / PROFILE NAV LINKS ================= */
+/* ================= FORCE CENTER DEN / PROFILE ================= */
 
-/* Center the nav links container */
-#header .navbar-main .navbar-nav {
-    justify-content: center;
-    width: 100%;
+/* Make navbar a positioning context */
+#header .navbar-main {
+    position: relative;
 }
 
-/* Ensure links don’t stretch or misalign */
-#header .navbar-main .nav-link {
-    display: inline-flex;
-    align-items: center;
+/* Target the main nav links list */
+#header .navbar-main .navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
 }

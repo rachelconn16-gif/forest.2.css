@@ -326,3 +326,16 @@ div[style*="background-color:#28a745"],
 div[style*="background-color: rgb(40, 167, 69)"] {
     background-color: var(--accent-brown) !important;
 }
+/* ================= CENTER DEN / PROFILE NAV LINKS ================= */
+
+/* Center the nav links container */
+#header .navbar-main .navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+/* Ensure links don’t stretch or misalign */
+#header .navbar-main .nav-link {
+    display: inline-flex;
+    align-items: center;
+}

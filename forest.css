@@ -319,25 +319,3 @@ span.bg-info {
     background-color: var(--accent-brown) !important;
     color: var(--text-light) !important;
 }
-
-/* Inline-style override */
-.progress-bar[style*="background"],
-div[style*="background-color:#28a745"],
-div[style*="background-color: rgb(40, 167, 69)"] {
-    background-color: var(--accent-brown) !important;
-}
-/* ================= FORCE CENTER DEN / PROFILE ================= */
-
-/* Make navbar a positioning context */
-#header .navbar-main {
-    position: relative;
-}
-
-/* Target the main nav links list */
-#header .navbar-main .navbar-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 14px;
-}

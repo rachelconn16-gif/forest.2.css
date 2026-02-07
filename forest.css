@@ -127,6 +127,14 @@ a:hover {
     color: var(--text-light);
     border-radius: 15px 15px 0px 0px;
 }
+/* ================= CENTER H-1 TITLE ================= */
+
+.h-1 {
+    width: 100%;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
 /* ================= CENTER USER / DEN NAME ================= */
 
 .h-1,

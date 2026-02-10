@@ -381,9 +381,7 @@ div[style*="background-color: rgb(40, 167, 69)"] {
     background-color: rgba(55, 65, 45, 0.95);
     color: rgba(215, 230, 200, 1);
 }
-/* =======================================================
-   FOOTER
-======================================================= */
+/* ================= FOOTER ================== */
 
 #footer {
     background-color: var(--bg-mid) !important;
@@ -398,12 +396,12 @@ div[style*="background-color: rgb(40, 167, 69)"] {
 #footer a:hover {
     color: var(--text-light);
 }
-/* ================= PAGE DOLL ================= */
+/* ================= PAGE DOLL — LEFT SIDE ================= */
 
 .page-doll {
     position: fixed !important;
     bottom: 15px;
-    right: 15px;
+    left: 15px;      /* ← LEFT SIDE */
     z-index: 9999;
     pointer-events: none;
 }
@@ -415,7 +413,6 @@ div[style*="background-color: rgb(40, 167, 69)"] {
     filter: drop-shadow(0 0 10px rgba(235,245,235,0.45));
 }
 
-/* Float animation */
 @keyframes pagedoll-float {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(-10px); }

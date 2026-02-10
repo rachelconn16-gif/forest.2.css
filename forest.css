@@ -396,24 +396,31 @@ div[style*="background-color: rgb(40, 167, 69)"] {
 #footer a:hover {
     color: var(--text-light);
 }
-/* ================= PAGE DOLL — LEFT SIDE ================= */
+/* ================= PAGE DOLL ================= */
 
-.page-doll {
-    position: fixed !important;
-    bottom: 15px;
-    left: 15px;      /* ← LEFT SIDE */
-    z-index: 9999;
+#sidebar {
+    position: relative !important;
+}
+
+/* Doll container */
+.sidebar-doll {
+    position: absolute !important;
+    bottom: -30px;      /* how low it hangs */
+    left: -140px;       /* pushes it OUT to the left */
+    z-index: 50;
     pointer-events: none;
 }
 
-.page-doll img {
+/* Doll image */
+.sidebar-doll img {
     max-width: 220px;
     height: auto;
-    animation: pagedoll-float 6s ease-in-out infinite;
+    animation: sidebar-float 6s ease-in-out infinite;
     filter: drop-shadow(0 0 10px rgba(235,245,235,0.45));
 }
 
-@keyframes pagedoll-float {
+/* Float animation */
+@keyframes sidebar-float {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(-10px); }
     100% { transform: translateY(0); }

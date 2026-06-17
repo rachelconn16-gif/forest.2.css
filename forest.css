@@ -289,52 +289,39 @@ span.bg-info {
 #footer a:hover {
     color: var(--text-light);
 }
-/* ================= MEMBER HEADER ================= */
-.member-header {
-    background: rgba(40, 50, 30, 0.95);
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 20px;
-    color: var(--text-main);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
+/* ================= FIXED HEADER COLORS ================= */
+#header {
+    background-color: var(--bg-mid) !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.8) !important;
 }
 
-/* section blocks inside header */
-.member-header-section {
-    flex: 1 1 180px;
-    background: rgba(55, 65, 45, 0.6);
-    border-radius: 12px;
-    padding: 10px 12px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+#header .navbar-main,
+#header .breadcrumb-nav,
+#header nav.breadcrumb-nav {
+    background-color: var(--bg-mid) !important;
+    color: var(--text-main) !important;
 }
 
-/* section titles */
-.member-header-section h4 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
-    color: var(--text-light);
-    text-align: left;
+#header .navbar-main .nav-link,
+#header .navbar-main .nav-link .fa {
+    color: var(--text-main) !important;
 }
 
-/* links inside header */
-.member-header-section a {
-    display: block;
-    color: var(--text-main);
-    font-weight: bold;
-    margin: 3px 0;
-    text-decoration: none;
+#header .navbar-main .nav-link:hover,
+#header .navbar-main .nav-link:hover .fa {
+    color: var(--text-light) !important;
 }
 
-.member-header-section a:hover {
-    color: var(--text-light);
+/* Breadcrumb text + separators */
+#header .breadcrumb-item,
+#header .breadcrumb-item a {
+    color: var(--text-main) !important;
 }
 
-/* highlight lead wolf */
-.member-header .lead-wolf {
-    border: 1px solid var(--accent-brown);
-    background: rgba(110, 90, 60, 0.25);
+#header .breadcrumb-item.active {
+    color: var(--text-light) !important;
+}
+
+#header .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--text-dark) !important;
 }
